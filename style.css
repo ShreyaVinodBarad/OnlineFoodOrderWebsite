@@ -1,0 +1,21 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+}
+
+
+.container{
+    border: 1px solid black;
+    /* Margin is applied outside the Border!
+    0 => Top and Bottom
+    auto => Left and Right
+    Eg:
+    margin: 5% auto; 
+    */
+    margin: 0 auto;
+    /* Padding is applied inside the Border!
+    Eg:
+    padding: 5%;
+    */
+    width: 80%;
+}
