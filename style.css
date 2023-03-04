@@ -91,3 +91,36 @@ a:hover{
 .searchBtnColor:hover{
     background-color: orangered;
 }
+
+/* Food Categories Section */
+.FoodCategories h2{
+    font-size: 2rem;
+    color:crimson;
+    font-weight: bold;
+}
+.FoodCategories{
+    padding: 4% 0;
+}
+.box-3{
+    float: left;
+    /* border: 1px solid black; */
+    width: 28%;
+    margin: 2%;
+    /* As we want the space outside the box from both the sides Right and Left so I am taking margin here! */
+}
+.floatContainer{
+    position: relative;
+}
+.floatText{
+    position: absolute;
+    bottom: 30px;
+    left: 40%;
+}
+.floatTextWhite{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.imgCurve{
+    border-radius: 20px;
+}
