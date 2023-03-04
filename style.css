@@ -1,6 +1,6 @@
 *{
     margin: 0 0;
-    padding: 0 0;
+    padding:0 0;
 }
 
 
@@ -18,4 +18,76 @@
     padding: 5%;
     */
     width: 80%;
+    padding: 1%;
+}
+
+/* Nav Bar Styling */
+/* Logo */
+.logo{
+    border: 1px solid red;
+    width: 10%;
+    float: left;
+}
+.ImgResponsive{
+    width: 100%;
+}
+/* Menu Nav Bar */
+.menu{
+    text-align: right;
+    line-height: 90px;
+}
+.clearfix{
+    /* both:The element is pushed below both left and right floated elements */
+    clear: both;
+    float: none;
+}
+/* Removing the dot of the Unordered List */
+.menu ul{
+    list-style-type: none;
+}
+.menu ul li{
+    display: inline;
+    padding: 1%;
+    font-weight: bold;
+}
+a{
+    color: orange;
+    text-decoration: none;
+}
+a:hover{
+    color: orangered;
+}
+
+/* Food Search Section */
+.FoodSearch{
+    background-image: url(Images/Food\ Search/BgImage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 7% 0;
+}
+.alignCenter{
+    text-align: center;
+}
+.FoodSearch input[type="search"]{
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;     
+    /*  1rem=>16px  */
+    border: none;
+    border-radius: 5px;
+}
+.searchBtn{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.searchBtnColor{
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+}
+.searchBtnColor:hover{
+    background-color: orangered;
 }
