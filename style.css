@@ -5,7 +5,7 @@
 
 
 .container{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     /* Margin is applied outside the Border!
     0 => Top and Bottom
     auto => Left and Right
@@ -24,12 +24,13 @@
 /* Nav Bar Styling */
 /* Logo */
 .logo{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 10%;
     float: left;
 }
 .ImgResponsive{
     width: 100%;
+    height: 100px;
 }
 /* Menu Nav Bar */
 .menu{
@@ -50,11 +51,11 @@
     padding: 1%;
     font-weight: bold;
 }
-a{
+.menu a{
     color: orange;
     text-decoration: none;
 }
-a:hover{
+.menu a:hover{
     color: orangered;
 }
 
@@ -124,3 +125,85 @@ a:hover{
 .imgCurve{
     border-radius: 20px;
 }
+.ImgResponsiveFoodCategories{
+    width: 100%;
+}
+
+
+/* Food Menu Section */
+.FoodMenu h2{
+    font-size: 2rem;
+    color:crimson;
+    font-weight: bold;
+}
+.foodMenuBox{
+    /* border: 1px solid black; */
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+}
+.FoodMenu{
+    background-color: rgb(252, 238, 116);
+    padding: 4% 0;
+}
+    /* Food Menu Box */
+.orderButtonColor{
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+.orderButtonColor:hover{
+    background-color: orangered;
+    color: white;
+
+}
+    /* Food Menu Image */
+.foodMenuBoxImg{
+    width: 20%;
+    float: left;
+}
+    /* Food Menu Description */
+.foodMenuBoxDescription{
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+}
+.foodMenuBoxDescription h4{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.foodPrice{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2% 0;
+}
+.foodDescription{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.orderButton{
+    padding: 1%;
+    /* border: 1px solid black; */
+}
+
+/* Social Media Section */
+.SocialMedia ul{
+    list-style-type: none;
+}
+.SocialMedia ul li{
+    display: inline;
+    padding: 1%;
+}
+.SocialMedia i{
+    font-weight: bold;
+    color: blue;
+    font-size: 40px;
+}
+.SocialMedia i:hover{
+    color: darkblue;
+}
+
