@@ -118,8 +118,6 @@
     background-color: rgb(252, 238, 116);
     padding: 1% 0;
     margin: 2% 0;
-
-    
 }
     /* Food Menu Box */
 .orderButtonColor{
@@ -190,3 +188,118 @@
     color: teal;
     text-decoration: none;
 }
+
+
+/* Making the Website Mobile Ready */
+/* For 768px */
+@media only screen and (max-width: 768px)
+{
+    /* NavBar Section */
+    .logo{
+        width: 45%;
+        height:auto;
+        margin: 6% auto;
+        float: none;
+    }
+    .menu ul{
+        text-align: center;
+
+    }
+    .menu ul li{
+        padding: 3%;
+        font-size: 0.6rem;
+    }
+    /* Food Search Section */
+    .FoodSearch input[type="search"]{
+        width: 80%;
+        padding: 2%;
+        margin: 5%;
+    }
+    .searchBtn{
+        width: 55%;
+        padding: 2%;
+    }
+    .FoodSearch{
+        padding: 10% 0;
+    }
+    /* Food Menu Section */
+    .FoodMenu h2{
+        margin-bottom: 12%;
+    }
+    .FoodMenu{
+        padding:20% 0;
+    }
+    .foodMenuBox{
+        width: 91%;
+        padding: 5%;
+        margin-bottom: 5%;
+        height: auto;
+    }
+    .foodMenuBox img{
+        height: 60px;
+    }
+    .foodMenuBoxDescription h4{
+        font-size: 1.8rem;
+    }
+    .foodPrice{
+        font-size: 1.5rem;
+    }
+    .foodDescription{
+        font-size: 1rem;
+    }
+
+    /* Socail Media Section */
+    .SocialMedia{
+        padding: 6% 0;
+    }
+
+    /* Footer Section */
+    .Footer p{
+        font-size: 0.6rem;
+        font-weight: bold; 
+        color:teal;
+    }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 768px)
+
+{
+    .logo{
+        width: 60%;
+        height: 95%;
+        margin: 6% auto;
+        float: none;
+    }
+    .menu ul{
+        text-align: center;
+        margin: 5%;
+    }
+    .menu ul li{
+        padding: 3%;
+        font-size: 1.5rem;
+    }
+
+    /* Food Menu Section */
+    .FoodMenu h2{
+        font-size: 2rem;
+        color:crimson;
+        font-weight: bold;
+        margin: 10%;
+    }
+    .FoodMenu{
+        padding:18% 0;
+    }
+    .foodMenuBox{
+        width: 85%;
+        padding: 5%;
+        margin-bottom: 5%;
+        height: auto;
+    }
+    /* Footer Section */
+    .Footer p{
+        font-size: 1.5rem;
+        font-weight: bold; 
+        color:teal;
+    }
+}
+

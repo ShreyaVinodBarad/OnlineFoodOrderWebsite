@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
+
+
+*{
+    margin: 0 0;
+    padding:0 0;
+    font-family: 'Merriweather', serif;
+}
+body{
+    /* background-image: url(Images/Background\ Image/BgImg_for_OrderNow_Page.jfif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    The background-attachment property sets whether a background image scrolls with the rest of the page, or is fixed.
+    fixed: The background image will not scroll with the page 
+    background-size: 100% 100%;*/
+}
+
+
+.container{
+    /* border: 1px solid black; */
+    /* Margin is applied outside the Border!
+    0 => Top and Bottom
+    auto => Left and Right
+    Eg:
+    margin: 5% auto; 
+    */
+    margin: 0 auto;
+    /* Padding is applied inside the Border!
+    Eg:
+    padding: 5%;
+    */
+    width: 80%;
+    padding: 1%;
+}
+
+/* Nav Bar Styling */
+/* Logo */
+.logo{
+    /* border: 1px solid red; */
+    width: 10%;
+    float: left;
+}
+.ImgResponsive{
+    width: 100%;
+    height: 100px;
+}
+/* Menu Nav Bar */
+.menu{
+    text-align: right;
+    line-height: 90px;
+}
+.clearfix{
+    /* both:The element is pushed below both left and right floated elements */
+    clear: both;
+    float: none;
+}
+/* Removing the dot of the Unordered List */
+.menu ul{
+    list-style-type: none;
+}
+.menu ul li{
+    display: inline;
+    padding: 1%;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.menu a{
+    color: orange;
+    text-decoration: none;
+}
+.menu a:hover{
+    color: orangered;
+}
+
+/* Food Order Form */
+.alignCenter{
+    text-align: center;
+}
+.foodMenuBoxImg{
+    max-width: 100%;
+    float: left;
+    padding: 2% 3%;
+    height: auto;
+}
+.ImgResponsive{
+    width: 100%;
+    height: 100px;
+}
+.imgCurve{
+    border-radius: 20px;
+}
+.OrderNow{
+    background-color: rgb(252, 238, 116);
+    width: 70%;
+    margin: 0 auto;
+}
+/* Food Menu Description */
+.foodMenuBoxDescription{
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+}
+.foodMenuBoxDescription h4{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.foodPrice{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2% 0;
+}
+.foodDescription{
+    font-size: 1rem;
+    font-weight: bold;
+}
+/* Quantity */
+.inputResponsive{
+    width: 90%;
+    padding: 1%;
+    margin-bottom: 5%;
+    border:none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+.inputResponsiveDD{
+    width: 90%;
+    padding: 1%;
+    margin-bottom: 5%;
+    border:none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin: auto 3%;
+
+}
+.Quantity{
+    margin-bottom: 1%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 3% auto;
+    padding: 1%;
+
+}
+.FormLabel{
+    margin-bottom: 1%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1% 3%;
+}
+/* Confirm Order Button */
+.orderButtonColor{
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+.orderButtonColor:hover{
+    background-color: orangered;
+    color: white;
+
+}
+.orderButton{
+    padding: 1%;
+    padding: 2% 3%;
+    margin: 2% 40%;
+
+}
