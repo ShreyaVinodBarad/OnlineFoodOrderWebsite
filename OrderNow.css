@@ -6,14 +6,14 @@
     padding:0 0;
     font-family: 'Merriweather', serif;
 }
-body{
+/* body{
     /* background-image: url(Images/Background\ Image/BgImg_for_OrderNow_Page.jfif);
     background-repeat: no-repeat;
     background-attachment: fixed;
     The background-attachment property sets whether a background image scrolls with the rest of the page, or is fixed.
     fixed: The background image will not scroll with the page 
-    background-size: 100% 100%;*/
-}
+    background-size: 100% 100%;
+} */
 
 
 .container{
