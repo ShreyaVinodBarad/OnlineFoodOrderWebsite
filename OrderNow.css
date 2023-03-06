@@ -109,10 +109,6 @@
     font-weight: bold;
     margin: 2% 0;
 }
-.foodDescription{
-    font-size: 1rem;
-    font-weight: bold;
-}
 /* Quantity */
 .inputResponsive{
     width: 90%;
@@ -163,4 +159,174 @@
     padding: 2% 3%;
     margin: 2% 40%;
 
+}
+
+/* Social Media Section */
+.SocialMedia ul{
+    list-style-type: none;
+}
+.SocialMedia ul li{
+    display: inline;
+    padding: 1%;
+}
+.SocialMedia i{
+    font-weight: bold;
+    color: blue;
+    font-size: 40px;
+}
+.SocialMedia i:hover{
+    color: darkblue;
+}
+
+/* Footer Section */
+.Footer p{
+    font-size: 1rem;
+    font-weight: bold; 
+    color:teal;
+
+}
+.Footer a{
+    color: teal;
+    text-decoration: none;
+}
+
+
+/* Making the Website Mobile Ready */
+/* For 768px */
+@media only screen and (max-width: 768px)
+{
+    /* NavBar Section */
+    .logo{
+        width: 45%;
+        height: 89%;
+        margin: 6% auto;
+        float: none;
+    }
+    .menu ul{
+        text-align: center;
+
+    }
+    .menu ul li{
+        padding: 3%;
+        font-size: 0.5rem;
+    }
+
+    /* Order Now Form */
+    .OrderNow{
+        margin: 0 15%;
+    }
+    .foodMenuBoxImg{
+        max-width: 100%;
+        float: none;
+        padding: 2% 5%;
+        height: 80%;
+    }
+    .foodMenuBoxImg img{
+        height: 200px;
+    }
+    
+    .foodMenuBoxDescription{
+        width: 70%;
+        float: none;
+        margin-left: 8%;
+        text-align: center;
+    }
+    .foodMenuBoxDescription h4{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .foodPrice{
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin: 2% 0;
+    }
+    .inputResponsiveDD{
+        font-size: 1rem;
+    }
+    .Quantity{
+        font-size: 1rem;
+    }
+    .FormLabel{
+        font-size: 1rem;
+    }
+    .orderButton{
+        margin: 2% 20%;
+    }
+    /* Socail Media Section */
+    .SocialMedia{
+        padding: 6% 0;
+    }
+
+    /* Footer Section */
+    .Footer p{
+        font-size: 0.6rem;
+        font-weight: bold; 
+        color:teal;
+    }
+}
+
+@media only screen and (max-width: 912px) and (min-width: 768px)
+
+{
+    /* NavBar Section */
+    .logo{
+        width: 45%;
+        height: 89%;
+        margin: 6% auto;
+        float: none;
+    }
+    .menu ul{
+        text-align: center;
+
+    }
+    .menu ul li{
+        padding: 3%;
+        font-size: 0.8rem;
+    }
+
+    /* Order Now Form */
+    .foodMenuBoxImg{
+        max-width: 100%;
+        float: none;
+        padding: 2% 5%;
+        height: 80%;
+    }
+    .foodMenuBoxImg img{
+        height: 200px;
+    }
+    
+    .foodMenuBoxDescription{
+        width: 70%;
+        float: none;
+        margin-left: 8%;
+        text-align: center;
+    }
+    .foodMenuBoxDescription h4{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .foodPrice{
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin: 2% 0;
+    }
+    .inputResponsiveDD{
+        font-size: 1rem;
+    }
+    .Quantity{
+        font-size: 1rem;
+    }
+    .FormLabel{
+        font-size: 1rem;
+    }
+    .orderButton{
+        margin: 2% 34%;
+    }
+    
+    /* Footer Section */
+    .Footer p{
+        font-size: 1.5rem;
+        font-weight: bold; 
+        color:teal
+    }
 }
