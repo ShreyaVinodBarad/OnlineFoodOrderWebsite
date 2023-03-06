@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
+
+
+*{
+    margin: 0 0;
+    padding:0 0;
+    font-family: 'Merriweather', serif;
+}
+
+
+.container{
+    /* border: 1px solid black; */
+    /* Margin is applied outside the Border!
+    0 => Top and Bottom
+    auto => Left and Right
+    Eg:
+    margin: 5% auto; 
+    */
+    margin: 0 auto;
+    /* Padding is applied inside the Border!
+    Eg:
+    padding: 5%;
+    */
+    width: 80%;
+    padding: 1%;
+}
+
+/* Nav Bar Styling */
+/* Logo */
+.logo{
+    /* border: 1px solid red; */
+    width: 10%;
+    float: left;
+}
+.ImgResponsive{
+    width: 100%;
+    height: 100px;
+}
+/* Menu Nav Bar */
+.menu{
+    text-align: right;
+    line-height: 90px;
+}
+.clearfix{
+    /* both:The element is pushed below both left and right floated elements */
+    clear: both;
+    float: none;
+}
+/* Removing the dot of the Unordered List */
+.menu ul{
+    list-style-type: none;
+}
+.menu ul li{
+    display: inline;
+    padding: 1%;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.menu a{
+    color: orange;
+    text-decoration: none;
+}
+.menu a:hover{
+    color: orangered;
+}
+
+/* Food Search Section */
+.FoodSearch{
+    background-image: url(Images/Food\ Search/BgImage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 7% 0;
+}
+.alignCenter{
+    text-align: center;
+}
+.FoodSearch input[type="search"]{
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;     
+    /*  1rem=>16px  */
+    border: none;
+    border-radius: 5px;
+}
+.searchBtn{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.searchBtnColor{
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+}
+.searchBtnColor:hover{
+    background-color: orangered;
+}
+/* Food Menu Section */
+.FoodMenu h2{
+    font-size: 2rem;
+    color:crimson;
+    font-weight: bold;
+    padding: 1% 0 ;
+}
+.foodMenuBox{
+    /* border: 1px solid black; */
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+    height: 250px;
+}
+.FoodMenu{
+    background-color: rgb(252, 238, 116);
+    padding: 1% 0;
+    margin: 2% 0;
+
+    
+}
+    /* Food Menu Box */
+.orderButtonColor{
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+.orderButtonColor:hover{
+    background-color: orangered;
+    color: white;
+
+}
+    /* Food Menu Image */
+.foodMenuBoxImg{
+    width: 20%;
+    float: left;
+}
+    /* Food Menu Description */
+.foodMenuBoxDescription{
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+}
+.foodMenuBoxDescription h4{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.foodPrice{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2% 0;
+}
+.foodDescription{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.orderButton{
+    padding: 1%;
+    /* border: 1px solid black; */
+}
+
+/* Social Media Section */
+.SocialMedia ul{
+    list-style-type: none;
+}
+.SocialMedia ul li{
+    display: inline;
+    padding: 1%;
+}
+.SocialMedia i{
+    font-weight: bold;
+    color: blue;
+    font-size: 40px;
+}
+.SocialMedia i:hover{
+    color: darkblue;
+}
+
+/* Footer Section */
+.Footer p{
+    font-size: 1rem;
+    font-weight: bold; 
+    color:teal;
+
+}
+.Footer a{
+    color: teal;
+    text-decoration: none;
+}
