@@ -103,6 +103,7 @@
     font-size: 2rem;
     color:crimson;
     font-weight: bold;
+    padding: 1% 0 ;
 }
 .FoodCategories{
     padding: 4% 0;
@@ -132,7 +133,7 @@
 }
 .ImgResponsiveFoodCategories{
     width: 100%;
-    height: 350px;
+    height: 300px;
 }
 
 
@@ -141,6 +142,7 @@
     font-size: 2rem;
     color:crimson;
     font-weight: bold;
+    padding: 1% 0 ;
 }
 .foodMenuBox{
     /* border: 1px solid black; */
@@ -224,3 +226,5 @@
     color: teal;
     text-decoration: none;
 }
+
+/* Making the Website Mobile Ready */
