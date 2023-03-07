@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.Wrapper{
+    /* border: 1px solid black; */
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+.AlignCenter{
+    text-align: center;
+}
+
+/* CSS For Menu */
+.Menu{
+    text-align: center;
+}
+.Menu ul{
+    list-style-type: none;
+}
+.Menu ul li{
+    display: inline;
+    padding: 1%;
+}
+.Menu a{
+    color: orange;
+    text-decoration: none;
+}
+.Menu a:hover{
+    color: orangered;
+}
+
+/* CSS For Main Content */
+.MainContent{
+    margin: 1% 0;
+    background-color: rgb(252, 238, 116);
+}
+/* CSS For Footer */
+.Footer{
+    background-color: orange;
+
+}
