@@ -22,7 +22,35 @@
     <!-- Main Content Section Starts Here -->
     <div class="MainContent">
         <div class="Wrapper">
-            <Strong>DashBoard</Strong>
+            <h1>
+                <Strong>DashBoard</Strong>
+            </h1>
+            <div class="Column4 AlignCenter">
+                <h2>
+                    5
+                </h2>
+                Categories
+            </div>
+            <div class="Column4 AlignCenter">
+                <h2>
+                    5
+                </h2>
+                Categories
+            </div>
+            <div class="Column4 AlignCenter">
+                <h2>
+                    5
+                </h2>
+                Categories
+            </div>
+            <div class="Column4 AlignCenter">
+                <h2>
+                    5
+                </h2>
+                Categories
+            </div>
+            <div class="ClearFix">
+            </div>
         </div>
     </div>
     <!-- Main Content Section Ends Here -->

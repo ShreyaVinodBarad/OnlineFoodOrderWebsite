@@ -39,6 +39,23 @@
 .MainContent{
     margin: 1% 0;
     background-color: rgb(252, 238, 116);
+    padding: 3% 0;
+    
+}
+.MainContent h1{
+    margin: 1%;
+}
+.Column4{
+    width: 18%;
+    background-color: white;
+    margin: 1%;
+    padding: 2%;
+    /* border: 1px solid black; */
+    float: left;
+}
+.ClearFix{
+    float: none;
+    clear: both;
 }
 /* CSS For Footer */
 .Footer{
