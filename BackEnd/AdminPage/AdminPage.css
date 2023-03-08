@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
 /* CSS for Admin Page */
 
 .FullWidthTable{
@@ -45,3 +46,38 @@ table tr td{
 .DeleteAdminButton:hover{
     background-color: darkred;
 }
+/* CSS For AddAdmin */
+.AddAdminTable{
+    width: 30%;
+    margin: auto 2%;
+    font-size: 1rem;
+    font-family: 'Merriweather', serif;   
+}
+.AddAdminTable tr{
+    margin: 10% 0;
+}
+.AddAdminTableButton{
+    background-color: green;
+    padding: 2%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.AddAdminTableButton:hover{
+    background-color: darkgreen;
+}
+input[type = text] {
+    width: 100%;
+    padding: 2% 1%;
+    margin: 2% 0;
+    box-sizing: border-box;
+}
+input[type = password] {
+    width: 100%;
+    padding: 2% 1%;
+    margin: 2% 0;
+    box-sizing: border-box;
+}
+
+

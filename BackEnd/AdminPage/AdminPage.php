@@ -12,6 +12,8 @@
     ?>
     <!-- Menu Section Ends Here -->
 
+
+
     <!-- Main Content Section Starts Here -->
     <div class="MainContent">
         <div class="Wrapper">
@@ -19,6 +21,12 @@
                 <Strong>Admin</Strong>
             </h1>
             <br>
+
+            <?php
+            if(isset($_SESSION['AddMessage'])){
+                echo ($_SESSION['AddMessage']);
+            }
+            ?>
             <a href="AddAdminPage.php" class="AddAdminButton">
                 Add Admin
             </a>
@@ -46,7 +54,6 @@
     </div>
     <!-- Main Content Section Ends Here -->
 
-    <!-- Main Content Section Ends Here -->
 
     <!-- Footer Section Starts Here -->
     <?php

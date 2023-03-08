@@ -9,11 +9,11 @@
     <div class="Menu">
         <div class="Wrapper">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Admin</a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Food</a></li>
-                <li><a href="#">Order</a></li>
+                <li><a href="../HomePage/index.php">Home</a></li>
+                <li><a href="../AdminPage/AdminPage.php">Admin</a></li>
+                <li><a href="../CategoryPage/CategoryPage.php">Category</a></li>
+                <li><a href="../FoodPage/FoodPage.php">Food</a></li>
+                <li><a href="../OrderPage/OrderPage.php">Order</a></li>
             </ul>
         </div>
     </div>
