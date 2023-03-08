@@ -1,0 +1,47 @@
+/* CSS for Admin Page */
+
+.FullWidthTable{
+    width: 100%;
+}
+table tr th{
+    border-bottom: 1px solid black;
+    padding: 1%;
+    text-align: left;
+}
+table tr td{
+    padding: 1%;
+}
+.AddAdminButton{
+    background-color: blue;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.AddAdminButton:hover{
+    background-color: darkblue;
+}
+.UpdateAdminButton{
+    background-color: green;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.UpdateAdminButton:hover{
+    background-color: darkgreen;
+}
+
+.DeleteAdminButton{
+    background-color: red;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.DeleteAdminButton:hover{
+    background-color: darkred;
+}
