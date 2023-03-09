@@ -19,6 +19,18 @@
                 <Strong>Add Admin</Strong>
             </h1>
             <br>
+            
+            <?php
+            session_start();
+            if(isset($_SESSION['AddMessage'])){
+                echo ($_SESSION['AddMessage']);
+                // Displaying Session Message
+
+                unset($_SESSION['AddMessage']);
+                // Removing Session Message
+            }
+            ?>
+
             <form action="" method="post">
             <table class="AddAdminTable">
                 <tr>
@@ -90,6 +102,8 @@
         else
         {
             //echo "Data Not Inserted!";
+            $_SESSION['AddMessage']="Admin Not Added Successfully!";
+            header("location:".SITEURL."BackEnd/AdminPage/AddAdminPage.php");
         }
 
     }
