@@ -49,6 +49,9 @@
                 </tr>
 
                 <?php
+
+                define('SITEURL','http://localhost:8080/SkillVertexInternship/Assignment-03And04/');
+
                 // Query to get all admin
                 $sql = "SELECT * FROM table_admin";
                 // Execute the Query
@@ -84,8 +87,10 @@
                             <td><?php echo $UserName;?></td>
                             <td>
                                 <a href="#" class="UpdateAdminButton">Update Admin</a>
-                                <a href="#" class="DeleteAdminButton">Delete Admin</a>
+                                <a href=" <?php echo SITEURL; ?>BackEnd/AdminPage/DeleteAdminPage.php?id = <?php echo $Id; ?>" class="DeleteAdminButton">Delete Admin</a>
+
                             </td>
+
                             </tr>
                             
                             <?php
