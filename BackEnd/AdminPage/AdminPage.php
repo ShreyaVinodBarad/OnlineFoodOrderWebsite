@@ -39,6 +39,25 @@
                 unset($_SESSION['DeleteAdmin']);
                 // Removing Session Message
             }
+            if(isset($_SESSION['UpdateAdmin'])){
+                echo ($_SESSION['UpdateAdmin']);
+                unset($_SESSION['UpdateAdmin']);
+            }
+            if(isset($_SESSION['UserNotFound'])){
+                echo ($_SESSION['UserNotFound']);
+                unset($_SESSION['UserNotFound']);
+            }
+
+            if(isset($_SESSION['PasswordDoesNotMatch'])){
+                echo ($_SESSION['PasswordDoesNotMatch']);
+                unset($_SESSION['PasswordDoesNotMatch']);
+            }
+
+            if(isset($_SESSION['PasswordChanged'])){
+                echo ($_SESSION['PasswordChanged']);
+                unset($_SESSION['PasswordChanged']);
+            }
+
             ?>
 
             <a href="AddAdminPage.php" class="AddAdminButton">
@@ -84,7 +103,7 @@
 
                             // Get individual data
 
-                            echo($rows['Id']);
+                            ($rows['Id']);
                             $Id=$rows['Id'];
                             $FullName=$rows['FullName'];
                             $UserName=$rows['UserName'];
@@ -95,7 +114,8 @@
                             <td><?php echo $FullName;?></td>
                             <td><?php echo $UserName;?></td>
                             <td>
-                                <a href="#" class="UpdateAdminButton">Update Admin</a>
+                                <a href="<?php echo SITEURL;?>BackEnd/AdminPage/UpdatePassword.php?id=<?php echo $Id;?>" class="ChangePasswordButton">Change Password</a>
+                                <a href="<?php echo SITEURL;?>BackEnd/AdminPage/UpdateAdminPage.php?id=<?php echo $Id;?>" class="UpdateAdminButton">Update Admin</a>
                                 <a href=" <?php echo SITEURL; ?>BackEnd/AdminPage/DeleteAdminPage.php?id=<?php echo $Id; ?>" class="DeleteAdminButton">Delete Admin</a>
 
                             </td>

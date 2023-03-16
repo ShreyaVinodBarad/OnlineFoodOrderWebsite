@@ -96,13 +96,13 @@
         if($result==true)
         {
             //echo "Data Inserted!";
-            $_SESSION['AddMessage']="Admin Added Successfully!";
+            $_SESSION['AddMessage']="<div class='success'>Admin Added Successfully!</div>";
             header("location:".SITEURL."BackEnd/AdminPage/AdminPage.php");
         }
         else
         {
             //echo "Data Not Inserted!";
-            $_SESSION['AddMessage']="Admin Not Added Successfully!";
+            $_SESSION['AddMessage']="<div class='failure'>Admin Not Added Successfully!</div>";
             header("location:".SITEURL."BackEnd/AdminPage/AddAdminPage.php");
         }
 
