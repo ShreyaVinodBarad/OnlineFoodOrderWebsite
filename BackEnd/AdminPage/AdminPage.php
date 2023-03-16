@@ -31,8 +31,15 @@
                 unset($_SESSION['AddMessage']);
                 // Removing Session Message
             }
-            ?>
+            
+            if(isset($_SESSION['DeleteAdmin'])){
+                echo ($_SESSION['DeleteAdmin']);
+                // Displaying Session Message
 
+                unset($_SESSION['DeleteAdmin']);
+                // Removing Session Message
+            }
+            ?>
 
             <a href="AddAdminPage.php" class="AddAdminButton">
                 Add Admin
@@ -76,6 +83,8 @@
                             // While loopo will run as long as we have data in the database
 
                             // Get individual data
+
+                            echo($rows['Id']);
                             $Id=$rows['Id'];
                             $FullName=$rows['FullName'];
                             $UserName=$rows['UserName'];
@@ -87,7 +96,7 @@
                             <td><?php echo $UserName;?></td>
                             <td>
                                 <a href="#" class="UpdateAdminButton">Update Admin</a>
-                                <a href=" <?php echo SITEURL; ?>BackEnd/AdminPage/DeleteAdminPage.php?id = <?php echo $Id; ?>" class="DeleteAdminButton">Delete Admin</a>
+                                <a href=" <?php echo SITEURL; ?>BackEnd/AdminPage/DeleteAdminPage.php?id=<?php echo $Id; ?>" class="DeleteAdminButton">Delete Admin</a>
 
                             </td>
 
