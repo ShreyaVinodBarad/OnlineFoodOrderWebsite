@@ -165,3 +165,43 @@ input[type = password] {
     margin: 2% 0;
     box-sizing: border-box;
 }
+/* CSS for Login */
+.Login{
+    border: 1px solid black;
+    width: 20%;
+    margin: 10% auto;
+    padding: 2%;
+    text-align:center;
+}
+.TextCenter{
+    text-align: center;
+}
+.LoginButton{
+    background-color: green;
+    padding: 2%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.LoginButton:hover{
+    background-color: darkgreen;
+}
+input[type = password] {
+    width: 100%;
+    padding: 2% 1%;
+    margin: 2% 0;
+    box-sizing: border-box;
+}
+.Login{
+    background-color: rgb(252, 238, 116);
+}
+
+/* index.php */
+.col4{
+    width: 20%;
+    background-color: darkkhaki;
+    margin: 1%;
+    padding: 2%;
+    text-align: center;
+}

@@ -91,7 +91,7 @@
         // Creating Session
         session_start();
         $result=mysqli_query($conn,$sql) or die(mysqli_error($conn));
-        define('SITEURL','http://localhost:8080/SkillVertexInternship/Assignment-03And04/');
+        define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
 
         if($result==true)
         {

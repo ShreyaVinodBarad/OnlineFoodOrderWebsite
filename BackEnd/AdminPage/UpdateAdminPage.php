@@ -14,7 +14,7 @@
 
     
     <?php
-    define('SITEURL','http://localhost:8080/SkillVertexInternship/Assignment-03And04/');
+    define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
     $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
     $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));    
     // Get the id of selected admin

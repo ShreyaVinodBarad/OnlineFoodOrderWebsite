@@ -76,7 +76,7 @@
 
                 <?php
 
-                define('SITEURL','http://localhost:8080/SkillVertexInternship/Assignment-03And04/');
+                define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
 
                 // Query to get all admin
                 $sql = "SELECT * FROM table_admin";
