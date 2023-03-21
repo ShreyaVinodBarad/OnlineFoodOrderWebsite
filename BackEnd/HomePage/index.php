@@ -28,11 +28,11 @@
                 // Removing Session Message
             }
 
-            if(isset($_SESSION['NotLoggedIn'])){
-                echo ($_SESSION['NotLoggedIn']);
+            if(isset($_SESSION['User'])){
+                echo ($_SESSION['User']);
                 // Displaying Session Message
     
-                unset($_SESSION['NotLoggedIn']);
+                unset($_SESSION['User']);
                 // Removing Session Message
             }
             ?>
