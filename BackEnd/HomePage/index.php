@@ -20,12 +20,19 @@
                 <Strong>DashBoard</Strong>
             </h1>
             <?php
-            session_start();
             if(isset($_SESSION['UserLogin'])){
                 echo ($_SESSION['UserLogin']);
                 // Displaying Session Message
 
                 unset($_SESSION['UserLogin']);
+                // Removing Session Message
+            }
+
+            if(isset($_SESSION['NotLoggedIn'])){
+                echo ($_SESSION['NotLoggedIn']);
+                // Displaying Session Message
+    
+                unset($_SESSION['NotLoggedIn']);
                 // Removing Session Message
             }
             ?>

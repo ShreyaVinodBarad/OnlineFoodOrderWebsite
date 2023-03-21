@@ -1,4 +1,5 @@
 <?php
+session_start();
 //1)Destory the session 
 session_destroy();
 // 2)Redirect to Login Page 
