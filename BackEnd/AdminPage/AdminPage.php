@@ -23,7 +23,6 @@
             <br>
 
             <?php
-            session_start();
             if(isset($_SESSION['AddMessage'])){
                 echo ($_SESSION['AddMessage']);
                 // Displaying Session Message

@@ -1,3 +1,8 @@
+<?php
+include("LoginCheck.php")
+?> 
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +19,7 @@
                 <li><a href="../CategoryPage/CategoryPage.php">Category</a></li>
                 <li><a href="../FoodPage/FoodPage.php">Food</a></li>
                 <li><a href="../OrderPage/OrderPage.php">Order</a></li>
+                <li><a href="../AdminPage/LogOut.php">LogOut</a></li>
             </ul>
         </div>
     </div>

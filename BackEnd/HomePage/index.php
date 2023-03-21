@@ -2,7 +2,9 @@
 <html>
 <head>
     <title>Online Food Delivery Website-Admin Panel</title>
+    <link rel="stylesheet" href="../AdminPage/AdminPage.css">
     <link rel="stylesheet" href="index.css">
+
 </head>
 <body>
     <!-- Menu Section Starts Here -->
@@ -17,6 +19,16 @@
             <h1>
                 <Strong>DashBoard</Strong>
             </h1>
+            <?php
+            session_start();
+            if(isset($_SESSION['UserLogin'])){
+                echo ($_SESSION['UserLogin']);
+                // Displaying Session Message
+
+                unset($_SESSION['UserLogin']);
+                // Removing Session Message
+            }
+            ?>
             <div class="Column4 AlignCenter">
                 <h2>
                     5

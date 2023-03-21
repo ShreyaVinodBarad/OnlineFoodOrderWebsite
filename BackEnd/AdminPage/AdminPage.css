@@ -196,12 +196,3 @@ input[type = password] {
 .Login{
     background-color: rgb(252, 238, 116);
 }
-
-/* index.php */
-.col4{
-    width: 20%;
-    background-color: darkkhaki;
-    margin: 1%;
-    padding: 2%;
-    text-align: center;
-}

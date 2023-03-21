@@ -62,3 +62,17 @@
     background-color: orange;
 
 }
+/* Message display in color for the DeleteAdminPage.php page */
+.success{
+    color: green;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+.failure{
+    color: red;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+
+}
