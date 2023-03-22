@@ -52,3 +52,26 @@ input[type = radio] {
     margin: 2% 5%;
     box-sizing: border-box;
 }
+.UpdateAdminButton{
+    background-color: green;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.UpdateAdminButton:hover{
+    background-color: darkgreen;
+}
+
+.DeleteAdminButton{
+    background-color: red;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.DeleteAdminButton:hover{
+    background-color: darkred;
+}
