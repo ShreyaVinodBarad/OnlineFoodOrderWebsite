@@ -57,6 +57,7 @@
                 unset($_SESSION['PasswordChanged']);
             }
 
+
             ?>
 
             <a href="AddAdminPage.php" class="AddAdminButton">

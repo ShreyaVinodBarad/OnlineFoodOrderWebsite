@@ -27,14 +27,6 @@
                 unset($_SESSION['UserLogin']);
                 // Removing Session Message
             }
-
-            if(isset($_SESSION['User'])){
-                echo ($_SESSION['User']);
-                // Displaying Session Message
-    
-                unset($_SESSION['User']);
-                // Removing Session Message
-            }
             ?>
             <div class="Column4 AlignCenter">
                 <h2>
