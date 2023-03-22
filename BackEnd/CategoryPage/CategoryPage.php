@@ -50,6 +50,7 @@
                 <?php
                 // Query to get all cateogries from database
                 $sql="SELECT * FROM table_category";
+                define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
                 // Execute Query 
                 $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
                 $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
@@ -85,10 +86,7 @@
                                 // Display Image
                                 ?>
                                 
-                                <img src="<?php 
-                                define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');  
-                                echo SITEURL;?>BackEnd/CategoryPage/Images/<?php echo $ImageName;?>" width="100px">
-
+                                <img src="<?php echo SITEURL; ?>BackEnd/CategoryPage/Images/<?php echo $ImageName;?>" width="100px">
                                 <?php
                             }
                             else{
