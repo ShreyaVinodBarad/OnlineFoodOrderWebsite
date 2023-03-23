@@ -29,6 +29,21 @@
                 unset($_SESSION['addCategory']);
                 // Removing Session Message
             }
+
+            if(isset($_SESSION['Remove'])){
+                echo ($_SESSION['Remove']);
+                // Displaying Session Message
+
+                unset($_SESSION['Remove']);
+                // Removing Session Message
+            }
+            if(isset($_SESSION['Delete'])){
+                echo ($_SESSION['Delete']);
+                // Displaying Session Message
+
+                unset($_SESSION['Delete']);
+                // Removing Session Message
+            }
             ?>
 
             <a href="AddCategory.php" class="AddAdminButton">
@@ -99,8 +114,8 @@
                         <td><?php echo $Active?></td>
                     
                         <td>
-                            <a href="#" class="UpdateAdminButton" >Update Category</a>
-                            <a href="#" class="DeleteAdminButton" >Delete Category</a>
+                            <a href="<?php echo SITEURL;?>BackEnd/CategoryPage/UpdateCategory.php" class="UpdateAdminButton" >Update Category</a>
+                            <a href="<?php echo SITEURL;?>BackEnd/CategoryPage/DeleteCategory.php?id=<?php echo $Id;?>&ImageName=<?php echo $ImageName;?>" class="DeleteAdminButton" >Delete Category</a>
                         </td>
                         </tr>
 
