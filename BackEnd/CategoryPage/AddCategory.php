@@ -113,34 +113,41 @@
                 // Check whether the image is selected or not and set the value for the image name accordingly
                 // print_r($_FILES['image']);
                 // die(); //Break the code here 
-                if(isset($_FILES['image']['name'])){
+                if(isset($_FILES['image']['name']))
+                {
                     // Upload the Image
                     // To upload the image we need image name,source path, and Destination path
                     $imageName=$_FILES['image']['name'];
 
-                    // AUTO rename the image
-                    // Get the extension of our image (jpg, png, gif , etc) eg."food.jpg"
-                    $ext=end(explode('.',$imageName));
-                    // Rename the image
-                    $imageName="FoodCategory_".rand(000,999).'.'.$ext; 
-                    // The name of the image that will be stored in the database is 
-                    // FoodCategory_834.jpg
+                    // Upload the image if the image is selected
+                    if($imageName !="")
+                    {
+
+                    
+
+                        // AUTO rename the image
+                        // Get the extension of our image (jpg, png, gif , etc) eg."food.jpg"
+                        $ext=end(explode('.',$imageName));
+                        // Rename the image
+                        $imageName="FoodCategory_".rand(000,999).'.'.$ext; 
+                        // The name of the image that will be stored in the database is 
+                        // FoodCategory_834.jpg
 
 
-                    $sourcePath=$_FILES['image']['tmp_name'];
-                    $destinationPath=$_FILES="Images/.$imageName";
-                    // Upload the image
-                    $Upload=move_uploaded_file($sourcePath,$destinationPath);
-                    // Check whether the image is uploaded or not
-                    // And image is not uploaded then we will stop the process and redirect with an 
-                    // Error message
-                    if($Upload==false){
-                        $_SESSION['Upload']="<div class='failure'>Image not Uploaded!</div>";
-                        // Redirect to category page
-                        header("location:".SITEURL."BackEnd/CategoryPage/AddCategory.php");
-                        // Stop the process
-                        die();
-
+                        $sourcePath=$_FILES['image']['tmp_name'];
+                        $destinationPath=$_FILES="Images/.$imageName";
+                        // Upload the image
+                        $Upload=move_uploaded_file($sourcePath,$destinationPath);
+                        // Check whether the image is uploaded or not
+                        // And image is not uploaded then we will stop the process and redirect with an 
+                        // Error message
+                        if($Upload==false){
+                            $_SESSION['Upload']="<div class='failure'>Image not Uploaded!</div>";
+                            // Redirect to category page
+                            header("location:".SITEURL."BackEnd/CategoryPage/AddCategory.php");
+                            // Stop the process
+                            die();
+                        }
                     }
                 }
                 else{

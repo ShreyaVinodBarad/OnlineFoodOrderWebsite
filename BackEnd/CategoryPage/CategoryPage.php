@@ -44,6 +44,13 @@
                 unset($_SESSION['Delete']);
                 // Removing Session Message
             }
+            if(isset($_SESSION['NoCategoryFound'])){
+                echo ($_SESSION['NoCategoryFound']);
+                // Displaying Session Message
+
+                unset($_SESSION['NoCategoryFound']);
+                // Removing Session Message
+            }
             ?>
 
             <a href="AddCategory.php" class="AddAdminButton">
@@ -114,7 +121,7 @@
                         <td><?php echo $Active?></td>
                     
                         <td>
-                            <a href="<?php echo SITEURL;?>BackEnd/CategoryPage/UpdateCategory.php" class="UpdateAdminButton" >Update Category</a>
+                            <a href="<?php echo SITEURL;?>BackEnd/CategoryPage/UpdateCategory.php?id=<?php echo $Id;?>" class="UpdateAdminButton" >Update Category</a>
                             <a href="<?php echo SITEURL;?>BackEnd/CategoryPage/DeleteCategory.php?id=<?php echo $Id;?>&ImageName=<?php echo $ImageName;?>" class="DeleteAdminButton" >Delete Category</a>
                         </td>
                         </tr>
