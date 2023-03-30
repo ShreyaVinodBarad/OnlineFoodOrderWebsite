@@ -108,7 +108,7 @@
                                 // Display Image
                                 ?>
                                 
-                                <img src="<?php echo SITEURL; ?>BackEnd/CategoryPage/Images/<?php echo $ImageName;?>" width="100px">
+                                <img src="<?php echo SITEURL; ?>BackEnd/CategoryPage/Images/.<?php echo $ImageName;?>" width="100px">
                                 <?php
                             }
                             else{

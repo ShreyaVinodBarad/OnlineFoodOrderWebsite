@@ -1,19 +1,22 @@
 <?php
 // Check  wether the value of Id and Image or not
+echo "hello";
 
 if(isset($_GET['id']) AND isset($_GET['ImageName'])){
+    define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
     // Get the value and Delete
     $Id=$_GET['id'];
     $ImageName=$_GET['ImageName'];
     // Remove the physical file available
     if($ImageName!=""){
         // Image is Available remove it
-        $Path="BackEnd/CategoryPage/Images".$ImageName;
+        $Path= SITEURL."BackEnd/CategoryPage/Images/.".$ImageName;
+        echo $Path;
         // Remove the Image
         $Remove=unlink($Path);
         // If failed to remove image add an error message and stop the process
         if($Remove==false){
-            define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
+            // define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
             // Set the session message
             $_SESSION['Remove']="<div class='failure'>Failed to remove Category Image!</div>";
             // Redirect to Category page
@@ -50,6 +53,6 @@ if(isset($_GET['id']) AND isset($_GET['ImageName'])){
 }
 else{
     // Redirect to manage Category page
-    header('location:'.SITEURL.'BackEnd/CategoryPage/CategoryPage.php');
+    // header('location:'.SITEURL.'BackEnd/CategoryPage/CategoryPage.php');
 }
 ?>
