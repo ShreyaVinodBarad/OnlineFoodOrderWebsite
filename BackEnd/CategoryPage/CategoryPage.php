@@ -59,6 +59,21 @@
                 unset($_SESSION['Update']);
                 // Removing Session Message
             }
+            if(isset($_SESSION['Upload'])){
+                echo ($_SESSION['Upload']);
+                // Displaying Session Message
+
+                unset($_SESSION['Upload']);
+                // Removing Session Message
+            }
+
+            if(isset($_SESSION['FailedToRemoveImage'])){
+                echo ($_SESSION['FailedToRemoveImage']);
+                // Displaying Session Message
+
+                unset($_SESSION['FailedToRemoveImage']);
+                // Removing Session Message
+            }
 
 
             ?>
