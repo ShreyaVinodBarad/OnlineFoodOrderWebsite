@@ -1,58 +1,69 @@
 <?php
-// Check  wether the value of Id and Image or not
-echo "hello";
-
-if(isset($_GET['id']) AND isset($_GET['ImageName'])){
-    define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
+session_start();
+// echo "Delete Category Page!";
+// Check whether the id name and image name is set or not
+if(isset($_GET['id']) AND isset($_GET['ImageName']))
+{
     // Get the value and Delete
-    $Id=$_GET['id'];
+    // echo "Get Value and Delete";
+    $id=$_GET['id'];
     $ImageName=$_GET['ImageName'];
-    // Remove the physical file available
+    // Remove the Image File if Available
     if($ImageName!=""){
-        // Image is Available remove it
-        $Path= SITEURL."BackEnd/CategoryPage/Images/.".$ImageName;
-        echo $Path;
-        // Remove the Image
+        // Image Available So remove it
+        $Path="../CategoryPage/Images/.".$ImageName;
+        // Remove The Image
         $Remove=unlink($Path);
-        // If failed to remove image add an error message and stop the process
+        // This will have boolean value
         if($Remove==false){
-            // define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
-            // Set the session message
-            $_SESSION['Remove']="<div class='failure'>Failed to remove Category Image!</div>";
-            // Redirect to Category page
-            header('location:'.SITEURL.'BackEnd/CategoryPage/CategoryPage.php');
-            // Stop the process
+            // Set the Session Message
+            $_SESSION['Remove']="<div class='failure'>Fail to Remove Category Image!</div>";
+            // Redirect to Category Page
+            ?>
+            <script>
+                window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/BackEnd/CategoryPage/CategoryPage.php';
+            </script>
+            <?php
+            // Stop the Process
             die();
-
         }
-
-        
     }
-    // Delete data from database
-    // SQL query to delete the data
-    $sql="DELETE FROM table_category Where Id=$Id";
-    // Execute the query
+    // Delete Data from Database
+    $sql="DELETE FROM table_category WHERE id=$id";
+    // Execute the Query
     $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
     $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
     $result=mysqli_query($conn,$sql);
-    // Check whether the data is deleted or not
+    // Check whether the data is deleted from the database or not
     if($result==true){
-        // Display success messsage and redirect
-        $_SESSION['Delete']="<div class='success'>Category deleted successfully!</div>";
-        // Redirect to Category page
-        header('location:'.SITEURL.'BackEnd/CategoryPage/CategoryPage.php');
+        // Set Success message and Redirect
+        $_SESSION['Delete']="<div class='success'>Category Deleted Successfully!</div>";
+        // Redirect
+        ?>
+        <script>
+            window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/BackEnd/CategoryPage/CategoryPage.php';
+        </script>
+        <?php
     }
     else{
-        // Display failure messsage and redirect
-        $_SESSION['Delete']="<div class='failure'>Category Not Deleted!!</div>";
-        // Redirect to Category page
-        header('location:'.SITEURL.'BackEnd/CategoryPage/CategoryPage.php');
+        // Set Failure Message and Redirect
+        $_SESSION['Delete']="<div class='failure'>Category Not Deleted!</div>";
+        // Redirect
+        ?>
+        <script>
+            window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/BackEnd/CategoryPage/CategoryPage.php';
+        </script>
+        <?php
 
     }
-
 }
-else{
-    // Redirect to manage Category page
-    // header('location:'.SITEURL.'BackEnd/CategoryPage/CategoryPage.php');
+else
+{
+    // Redirect to Category page
+    ?>
+    <script>
+        window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/BackEnd/CategoryPage/CategoryPage.php';
+    </script>
+    <?php   
 }
 ?>

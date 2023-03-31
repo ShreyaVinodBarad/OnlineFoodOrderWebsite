@@ -50,7 +50,11 @@
             }
             else{
                 // Redirect to category page
-                header('location:'.SITEURL."BackEnd/CategoryPage/CategoryPage.php");
+                ?>
+                <script>
+                    window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/BackEnd/CategoryPage/CategoryPage.php'
+                </script>
+                <?php
             }
             
             
@@ -74,7 +78,8 @@
                             if($CurrentImage != ""){
                                 // Display the image
                                 ?>
-                                
+                                <img src="http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/BackEnd/CategoryPage/Images/.<?php echo $CurrentImage;?>" width="100px">
+
                                 <?php
                             }
                             else{

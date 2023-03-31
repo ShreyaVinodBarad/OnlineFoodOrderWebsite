@@ -109,7 +109,6 @@
                     // Set the default value
                     $active="No";
                 }
-                define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
                 // Check whether the image is selected or not and set the value for the image name accordingly
                 // print_r($_FILES['image']);
                 // die(); //Break the code here 
@@ -144,7 +143,11 @@
                         if($Upload==false){
                             $_SESSION['Upload']="<div class='failure'>Image not Uploaded!</div>";
                             // Redirect to category page
-                            header("location:".SITEURL."BackEnd/CategoryPage/AddCategory.php");
+                            ?>
+                            <script>
+                                window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/BackEnd/CategoryPage/AddCategory.php';
+                            </script>
+                            <?php
                             // Stop the process
                             die();
                         }
@@ -171,17 +174,25 @@
 
                 $result=mysqli_query($conn,$sql);
                 // Check whether the query is executed or not and data is added or not
-                define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
 
                 if($result==true){
                     // Query executed and category added
                     $_SESSION['addCategory']="<div class='success'>Category Added Successfully!</div>";
-                    header("location:".SITEURL."BackEnd/CategoryPage/CategoryPage.php");
+                    ?>
+                    <script>
+                        window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/BackEnd/CategoryPage/CategoryPage.php'
+                    </script>
+                    <?php
+
                 }
                 else{
                     // Failed to Add Category
                     $_SESSION['addCategory']="<div class='failure'>Category not Added!</div>";
-                    header("location:".SITEURL."BackEnd/CategoryPage/AddCategory.php");
+                    ?>
+                    <script>
+                        window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/BackEnd/CategoryPage/AddCategory.php'
+                    </script>
+                    <?php
                 }
             }
             ?>
