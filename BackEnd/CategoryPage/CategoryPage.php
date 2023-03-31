@@ -44,6 +44,22 @@
                 unset($_SESSION['Delete']);
                 // Removing Session Message
             }
+            // Update Cateogry
+            if(isset($_SESSION['NoCategoryFound'])){
+                echo ($_SESSION['NoCategoryFound']);
+                // Displaying Session Message
+
+                unset($_SESSION['NoCategoryFound']);
+                // Removing Session Message
+            }
+            if(isset($_SESSION['Update'])){
+                echo ($_SESSION['Update']);
+                // Displaying Session Message
+
+                unset($_SESSION['Update']);
+                // Removing Session Message
+            }
+
 
             ?>
 

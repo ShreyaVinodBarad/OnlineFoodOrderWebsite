@@ -47,6 +47,15 @@
 
 
                 }
+                else{
+                    // Redirect to Category with Session Message
+                    $_SESSION['NoCategoryFound']="<div class='failure'>Category Not Found!</div>";
+                    ?>
+                    <script>
+                        window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/BackEnd/CategoryPage/CategoryPage.php'
+                    </script>
+                    <?php
+                }
             }
             else{
                 // Redirect to category page
@@ -104,8 +113,8 @@
                     <tr>
                         <td>Featured</td>
                         <td>
-                            <input type="radio" name="featured" value="Yes">Yes
-                            <input type="radio" name="featured" value="No">No
+                            <input <?php if($Featured=="Yes")echo "checked";?> type="radio" name="featured" value="Yes">Yes
+                            <input <?php if($Featured=="No")echo "checked";?> type="radio" name="featured" value="No">No
                         </td>
                     </tr>
 
@@ -113,20 +122,75 @@
                     <tr>
                         <td>Active</td>
                         <td>
-                            <input type="radio" name="active" value="Yes">Yes
-                            <input type="radio" name="active" value="No">No
+                            <input <?php if($Active=="Yes")echo "checked";?> type="radio" name="active" value="Yes">Yes
+                            <input <?php if($Active=="No")echo "checked";?> type="radio" name="active" value="No">No
                         </td>
                     </tr>
 
                     <td colspan="2">
-                        <input type="submit" name="Submit" value="Update Category" class="AddCategoryButton">
+                        <input type="hidden" name="CurrentImage" value="<?php echo $CurrentImage; ?>">
+                        <input type="hidden" name="Id" value="<?php echo $Id; ?>">
+                        <input type="Submit" name="Submit" value="Update Category" class="AddCategoryButton">
                     </td>
-
-
-
-
                 </table>
             </form>
+            <?php
+            if(isset($_POST['Submit'])){
+                echo "Clicked";
+                // 1)Get all the values from our form
+                $Id=$_POST['Id'];
+                $Title=$_POST['Title'];
+                $CurrentImage=$_POST['CurrentImage'];
+                $Featured=$_POST['featured'];
+                $Active=$_POST['active'];
+                // 2)Updating new image if selected
+                // Check whether the image is selected or not
+                if(isset($_FILES['image']['name']))
+                {
+                    // Get The IMAGE Details
+                }
+                else
+                {
+                    
+                }
+                // 3)Update the Database
+                $sql2="UPDATE table_category SET
+                Title='$Title',
+                Featured='$Featured',
+                Active='$Active'
+                WHERE Id=$Id
+                ";
+                // Execute the Query
+                $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
+                $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
+                $result2=mysqli_query($conn,$sql2);
+                // 4)Redirect to Category Page with Message
+                // Check wether query is executed or not
+                if($result2==true){
+                    // Category Updated
+                    $_SESSION['Update']="<div class='success'>Category Updated Successfully!</div>";
+                    ?>
+                    <script>
+                        window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/BackEnd/CategoryPage/CategoryPage.php'
+                    </script>
+                    <?php
+                }
+                else{
+                    // Failed to Update Category
+                    $_SESSION['Update']="<div class='failure'>Failred to Update Category!</div>";
+                    ?>
+                    <script>
+                        window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/BackEnd/CategoryPage/CategoryPage.php'
+                    </script>
+                    <?php
+                }
+
+
+            }
+            
+            
+            
+            ?>
         </div>
     </div>
     <!-- Main Content Section Ends Here -->

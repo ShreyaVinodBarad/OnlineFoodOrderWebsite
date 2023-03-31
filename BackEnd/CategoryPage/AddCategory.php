@@ -23,7 +23,7 @@
             <br>
 
             <?php
-
+            
             if(isset($_SESSION['addCategory'])){
                 echo ($_SESSION['addCategory']);
                 // Displaying Session Message
@@ -164,9 +164,9 @@
                 // Create sql query to insert the data in the database
                 $sql="INSERT INTO table_category SET 
                 Title='$Title',
-                imageName='$imageName',
-                featured='$featured',
-                active='$active'
+                ImageName='$imageName',
+                Featured='$featured',
+                Active='$active'
                 ";
                 // Execute the query and save the data in the database
                 $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
