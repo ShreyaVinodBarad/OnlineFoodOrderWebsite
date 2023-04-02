@@ -3,6 +3,7 @@
 <head>
     <title>Online Food Delivery Website-Admin Panel</title>
     <link rel="stylesheet" href="../HomePage/index.css">
+    <link rel="stylesheet" href="FoodPage.css">
 </head>
 <body>
     <!-- Menu Section Starts Here -->
@@ -17,11 +18,40 @@
             <h1>
                 <Strong>Food</Strong>
             </h1>
+            <?php
+             if(isset($_SESSION['Insert'])){
+                echo ($_SESSION['Insert']);
+                // Displaying Session Message
+
+                unset($_SESSION['Insert']);
+                // Removing Session Message
+            }
+            ?>
+            <br>
+            <a href="AddFood.php" class="AddAdminButton">
+                Add Category
+            </a>
+            <br>
+            <br>
+
+            <table class="FullWidthTable">
+                <tr>
+                    <th>Sr.No.</th>
+                    <th>Title</th>
+                    <th>Image</th>
+                    <th>Featured</th>
+                    <th>Active</th>
+                    <th>Actions</th>
+                </tr>
+
+                
+            </table>
+        </div>
+    </div>
         </div>
     </div>
     <!-- Main Content Section Ends Here -->
 
-    <!-- Main Content Section Ends Here -->
 
     <!-- Footer Section Starts Here -->
     <?php

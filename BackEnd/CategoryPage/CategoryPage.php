@@ -181,10 +181,6 @@
     </div>
     <!-- Main Content Section Ends Here -->
 
-        </div>
-    </div>
-    <!-- Main Content Section Ends Here -->
-
 
     <!-- Footer Section Starts Here -->
     <?php
