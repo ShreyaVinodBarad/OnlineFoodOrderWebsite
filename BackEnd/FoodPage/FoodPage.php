@@ -46,6 +46,28 @@
                 unset($_SESSION['FoodDeleted']);
                 // Removing Session Message
             }
+            if(isset($_SESSION['FailedToUploadImageInUpdateFood']))
+            {
+                echo ($_SESSION['FailedToUploadImageInUpdateFood']);
+                // Displaying Session Message
+                unset($_SESSION['FailedToUploadImageInUpdateFood']);
+                // Removing Session Message
+            }
+            if(isset($_SESSION['UpdateFood']))
+            {
+                echo ($_SESSION['UpdateFood']);
+                // Displaying Session Message
+                unset($_SESSION['UpdateFood']);
+                // Removing Session Message
+            }
+            if(isset($_SESSION['FailedToRemoveImage']))
+            {
+                echo ($_SESSION['FailedToRemoveImage']);
+                // Displaying Session Message
+                unset($_SESSION['FailedToRemoveImage']);
+                // Removing Session Message
+            }
+
             ?>
             <br>
             <a href="AddFood.php" class="AddAdminButton">
@@ -124,7 +146,7 @@
                             <?php echo $Active; ?>
                         </td>
                         <td>
-                            <a href="" class="UpdateAdminButton">Update Food</a>
+                            <a href="<?php echo SITEURL;?>BackEnd/FoodPage/UpdateFood.php?id=<?php echo $Id;?>" class="UpdateAdminButton">Update Food</a>
                             <a href="<?php echo SITEURL;?>BackEnd/FoodPage/DeleteFood.php?id=<?php echo $Id;?>&ImageName=<?php echo $ImageName;?>" class="DeleteAdminButton">Delete Food</a>
                         </td>
                     </tr>

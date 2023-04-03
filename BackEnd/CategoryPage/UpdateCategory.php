@@ -233,7 +233,7 @@
                 }
                 else{
                     // Failed to Update Category
-                    $_SESSION['Update']="<div class='failure'>Failred to Update Category!</div>";
+                    $_SESSION['Update']="<div class='failure'>Failed to Update Category!</div>";
                     ?>
                     <script>
                         window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/BackEnd/CategoryPage/CategoryPage.php'
