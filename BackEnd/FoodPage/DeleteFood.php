@@ -1,4 +1,5 @@
 <?php
+session_start();
 // echo "Delete Food Page!"
 // First we need to check whether the Value is passed or not
 if(isset($_GET['id']) && ($_GET['ImageName']))
@@ -31,6 +32,33 @@ if(isset($_GET['id']) && ($_GET['ImageName']))
             die();
         }
     } 
+    // Delete food from database
+    $sql="DELETE FROM table_food WHERE Id=$Id";
+    //Execute the query
+    $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
+    $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
+    $Result=mysqli_query($conn,$sql);
+    // Check whether the query is executed or not
+    if($Result==true)
+    {
+        // Query Executed
+        $_SESSION['FoodDeleted']="<div class='success'>Data is Successfully Deleted!</div>";
+        ?>
+        <script>
+            window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/BackEnd/FoodPage/FoodPage.php'
+        </script>
+        <?php
+
+    }
+    else{
+        // Query not Executed
+        $_SESSION['FoodDeleted']="<div class='failure'>Data is Failed to Delete!</div>";
+        ?>
+        <script>
+            window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/BackEnd/FoodPage/FoodPage.php'
+        </script>
+        <?php
+    }
 }
 else
 {

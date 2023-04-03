@@ -39,6 +39,13 @@
                 unset($_SESSION['Remove']);
                 // Removing Session Message
             }
+            if(isset($_SESSION['FoodDeleted']))
+            {
+                echo ($_SESSION['FoodDeleted']);
+                // Displaying Session Message
+                unset($_SESSION['FoodDeleted']);
+                // Removing Session Message
+            }
             ?>
             <br>
             <a href="AddFood.php" class="AddAdminButton">
