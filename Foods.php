@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,17 +22,17 @@
             <div class="menu">
                 <ul>
                     <li>
-                        <a href="index.html">
+                        <a href="index.php">
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="Categories.html">
+                        <a href="Categories.php">
                             Categories
                         </a>
                     </li>
                     <li>
-                        <a href="Foods.html">
+                        <a href="Foods.php">
                             Foods
                         </a>
                     </li>
@@ -80,7 +81,7 @@
                         Momo is a type of steamed filled dumpling, with origins from Tibet. 
                     </p>
                     <br>
-                    <a href="OrderNow.html" class="orderButton orderButtonColor">
+                    <a href="OrderNow.php" class="orderButton orderButtonColor">
                         Order Now
                     </a>
                 </div>
@@ -103,7 +104,7 @@
                         Burger, is a food consisting of fillings—usually a patty of ground meat, typically beef—placed inside a sliced bun or bread roll.
                     </p>
                     <br>
-                    <a href="OrderNow.html" class="orderButton orderButtonColor">
+                    <a href="OrderNow.php" class="orderButton orderButtonColor">
                         Order Now
                     </a>
                 </div>
@@ -126,7 +127,7 @@
                         This is a kind of Pizza. Its originated from US. Its main ingredients are Pizza dough, cheese, tomato sauce. 
                     </p>
                     <br>
-                    <a href="OrderNow.html" class="orderButton orderButtonColor">
+                    <a href="OrderNow.php" class="orderButton orderButtonColor">
                         Order Now
                     </a>
                 </div>
@@ -149,7 +150,7 @@
                         A sandwich is a food typically consisting of vegetables, sliced cheese or meat, placed on or between slices of bread, or more generally any dish wherein bread serves as a container or wrapper for another food type                    
                     </p>
                     <br>
-                    <a href="OrderNow.html" class="orderButton orderButtonColor">
+                    <a href="OrderNow.php" class="orderButton orderButtonColor">
                         Order Now
                     </a>
                 </div>
@@ -172,7 +173,7 @@
                         Sorbet is a frozen dessert made using ice combined with fruit juice, fruit purée, or other ingredients, such as wine, liqueur, or honey. Generally, sorbets do not contain dairy products, while sherbets do 
                     </p>
                     <br>
-                    <a href="OrderNow.html" class="orderButton orderButtonColor">
+                    <a href="OrderNow.php" class="orderButton orderButtonColor">
                         Order Now
                     </a>
                 </div>
@@ -195,7 +196,7 @@
                         Genoese cake or Genovese cake, is an Italian sponge cake named after the city of Genoa and associated with Italian and French cuisine 
                     </p>
                     <br>
-                    <a href="OrderNow.html" class="orderButton orderButtonColor">
+                    <a href="OrderNow.php" class="orderButton orderButtonColor">
                         Order Now
                     </a>
                 </div>

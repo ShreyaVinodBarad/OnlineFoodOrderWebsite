@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,17 +23,17 @@
             <div class="menu">
                 <ul>
                     <li>
-                        <a href="index.html">
+                        <a href="index.php">
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="Categories.html">
+                        <a href="Categories.php">
                             Categories
                         </a>
                     </li>
                     <li>
-                        <a href="Foods.html">
+                        <a href="Foods.php">
                             Foods
                         </a>
                     </li>

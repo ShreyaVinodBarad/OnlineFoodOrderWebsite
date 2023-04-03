@@ -22,17 +22,17 @@
             <div class="menu">
                 <ul>
                     <li>
-                        <a href="index.html">
+                        <a href="index.php">
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="Categories.html">
+                        <a href="Categories.php">
                             Categories
                         </a>
                     </li>
                     <li>
-                        <a href="Foods.html">
+                        <a href="Foods.php">
                             Foods
                         </a>
                     </li>
@@ -120,7 +120,7 @@
                         This is a kind of Pizza. Its originated from US. Its main ingredients are Pizza dough, cheese, tomato sauce. 
                     </p>
                     <br>
-                    <a href="OrderNow.html" class="orderButton orderButtonColor">
+                    <a href="OrderNow.php" class="orderButton orderButtonColor">
                         Order Now
                     </a>
                 </div>
@@ -143,7 +143,7 @@
                         This is a kind of Pizza. Its originated from US. Its main ingredients are Pizza dough, cheese, tomato sauce.
                     </p>
                     <br>
-                    <a href="OrderNow.html" class="orderButton orderButtonColor">
+                    <a href="OrderNow.php" class="orderButton orderButtonColor">
                         Order Now
                     </a>
                 </div>
@@ -166,7 +166,7 @@
                         This is a kind of Pizza. Its originated from US. Its main ingredients are Pizza dough, cheese, tomato sauce. 
                     </p>
                     <br>
-                    <a href="OrderNow.html" class="orderButton orderButtonColor">
+                    <a href="OrderNow.php" class="orderButton orderButtonColor">
                         Order Now
                     </a>
                 </div>
@@ -189,7 +189,7 @@
                         This is a kind of Pizza. Its originated from US. Its main ingredients are Pizza dough, cheese, tomato sauce. 
                     </p>
                     <br>
-                    <a href="OrderNow.html" class="orderButton orderButtonColor">
+                    <a href="OrderNow.php" class="orderButton orderButtonColor">
                         Order Now
                     </a>
                 </div>
@@ -212,7 +212,7 @@
                         This is a kind of Pizza. Its originated from US. Its main ingredients are Pizza dough, cheese, tomato sauce. 
                     </p>
                     <br>
-                    <a href="OrderNow.html" class="orderButton orderButtonColor">
+                    <a href="OrderNow.php" class="orderButton orderButtonColor">
                         Order Now
                     </a>
                 </div>
@@ -235,7 +235,7 @@
                         This is a kind of Pizza. Its originated from US. Its main ingredients are Pizza dough, cheese, tomato sauce. 
                     </p>
                     <br>
-                    <a href="OrderNow.html" class="orderButton orderButtonColor">
+                    <a href="OrderNow.php" class="orderButton orderButtonColor">
                         Order Now
                     </a>
                 </div>
