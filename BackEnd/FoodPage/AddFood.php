@@ -23,14 +23,14 @@ echo "This is Add Category Page!";
             </h1>
             <br>
             <?php
-             if(isset($_SESSION['Upload'])){
+            if(isset($_SESSION['Upload'])){
                 echo ($_SESSION['Upload']);
                 // Displaying Session Message
-
                 unset($_SESSION['Upload']);
                 // Removing Session Message
             }
             ?>
+
             <form action="" method="POST" enctype="multipart/form-data">
                 <table class="AddCategoryTable">
                     <tr>
