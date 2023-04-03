@@ -67,30 +67,56 @@
             <h2 class="alignCenter">
                 Inspiration for your First Order
             </h2>
-            <div class="box-3 floatContainer">
-                <a href="./Categories/Pizza/Pizza.html">
-                <img src="./Images/Food Categories/Pizza.avif" alt="Pizza" class="ImgResponsiveFoodCategories imgCurve">
-                <h3 class="floatText floatTextWhite">
-                    Pizza
-                </h3>
-                </a>
-            </div>
-            <div class="box-3 floatContainer">
-                <a href="./Categories/Momos/Momos.html">
-                <img src="./Images/Food Categories/Momos.jpg" alt="Momos" class="ImgResponsiveFoodCategories imgCurve">
-                <h3 class="floatText floatTextWhite">
-                    Momos
-                </h3>
-                </a>
-            </div>
-            <div class="box-3 floatContainer">
-                <a href="./Categories/Burger/Burger.html">
-                <img src="./Images/Food Categories/Burger.jpg" alt="Burger" class="ImgResponsiveFoodCategories imgCurve">
-                <h3 class="floatText floatTextWhite">
-                    Burger
-                </h3>
-                </a>
-            </div>
+            <?php
+            define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
+            // Create sql query to display category from database
+            $sql="SELECT * FROM table_category";
+            // Execute the query
+            $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
+            $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
+            $Result=mysqli_query($conn,$sql);
+            // Count Rows to check whether the categoery is available or not
+            $Count=mysqli_num_rows($Result);
+            if($Count>0)
+            {
+                // Categories is available
+                while($row=mysqli_fetch_assoc($Result))
+                {
+                    // Get the values like Id, Title, ImageName
+                    $Id=$row['Id'];
+                    $Title=$row['Title'];
+                    $ImageName=$row['ImageName'];
+                    ?>
+                    <div class="box-3 floatContainer">
+                    <a href="./Categories/Pizza/Pizza.html">
+                    <?php
+                    if($ImageName=="")
+                    {
+                        // Display the Message
+                        echo "<div class='failure'> Image Not Available!</div>";
+                    }
+                    else{
+                        // Image is Available
+                        ?>
+                        <img src="<?php echo SITEURL; ?>BackEnd/CategoryPage/Images/.<?php echo $ImageName;?>" alt="Pizza" class="ImgResponsiveFoodCategories imgCurve">
+                        <?php                        
+                    }
+                    ?>
+                    <h3 class="floatText floatTextWhite">
+                        <?php echo $Title; ?>
+                    </h3>
+                    </a>
+                    </div>
+
+                    <?php
+                }
+            }
+            else
+            {
+                // Category not available
+                echo "<div class='failure'> Category Not Available!</div>";
+            }
+            ?>
             <div class="clearfix">
             </div>
         </div>
