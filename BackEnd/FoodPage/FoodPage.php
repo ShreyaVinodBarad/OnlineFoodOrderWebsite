@@ -71,7 +71,7 @@
             ?>
             <br>
             <a href="AddFood.php" class="AddAdminButton">
-                Add Category
+                Add Food
             </a>
             <br>
             <br>
