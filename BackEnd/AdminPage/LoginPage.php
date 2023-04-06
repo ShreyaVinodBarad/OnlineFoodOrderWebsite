@@ -70,7 +70,7 @@ if(isset($_POST['Submit'])){
         // To check whether the user is log in or not and LogOut will Unset it.
 
         // Redirect to Home Page
-        header("location:".SITEURL."BackEnd/HomePage/index.php");
+        header("location:".SITEURL."BackEnd/HomePage/Dashboard.php");
     } 
     else{
         // User not Available

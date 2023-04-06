@@ -14,7 +14,7 @@ include("LoginCheck.php")
     <div class="Menu">
         <div class="Wrapper">
             <ul>
-                <li><a href="../HomePage/index.php">Home</a></li>
+                <li><a href="../HomePage/Dashboard.php">Home</a></li>
                 <li><a href="../AdminPage/AdminPage.php">Admin</a></li>
                 <li><a href="../CategoryPage/CategoryPage.php">Category</a></li>
                 <li><a href="../FoodPage/FoodPage.php">Food</a></li>
