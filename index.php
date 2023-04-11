@@ -70,7 +70,7 @@
             <?php
             define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
             // Create sql query to display category from database
-            $sql="SELECT * FROM table_category";
+            $sql="SELECT * FROM table_category WHERE Active='Yes' LIMIT 3";
             // Execute the query
             $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
             $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
@@ -130,145 +130,84 @@
             <h2 class="alignCenter">
                 Explore Foods
             </h2>
+
+            <?php
+            // SQL Query
+            $sql2="SELECT * FROM table_food WHERE Active='Yes' AND Featured='Yes' LIMIT 6";
+            // Execute Query
+            $Result2=mysqli_query($conn,$sql2);
+            // Count Rows
+            $Count2=mysqli_num_rows($Result2);
+            // Check Whether the food available or not
+            if($Count2>0)
+            {
+                // Food Available
+                while($row2=mysqli_fetch_assoc($Result2))
+                {
+                    // Get all the Values
+                    $Id2=$row2['Id'];
+                    $Title2=$row2['Title'];
+                    $Price=$row2['Price'];
+                    $Description=$row2['Description'];
+                    $ImageName2=$row2['ImageName'];
+                    ?>
+
+                    <div class="foodMenuBox">
+                    <div class="foodMenuBoxImg">
+                        <?php
+                        if($ImageName2=="")
+                        {
+                            // Image Not Avaialble
+                            // Display the Message
+                            echo "<div class='failure'> Image Not Available!</div>";
+                        }
+                        else
+                        {
+                            // Image is Available
+                            ?>
+                            <img src="<?php echo SITEURL; ?>BackEnd/FoodPage/Images/.<?php echo $ImageName2;?>" alt="foodMenuPizza" class="ImgResponsive imgCurve">
+                            <?php
+                        }
+                        ?>
+                    </div>
+                    <div class="foodMenuBoxDescription">
+                        <h4>
+                            <?php
+                            echo $Title2
+                            ?>
+                        </h4>
+                        <p class="foodPrice">
+                            <?php
+                            echo $Price;
+                            ?>
+                        </p>
+                        <p class="foodDescription">
+                            <?php
+                            echo $Description;
+                            ?> 
+                        </p>
+                        <br>
+                        <a href="OrderNow.php" class="orderButton orderButtonColor">
+                            Order Now
+                        </a>
+                    </div>
+                    <div class="clearfix">   
+                    </div>
+                    </div>
+
+
+
+                    <?php
+                }
+            }
+            else
+            {
+                // Food Not Available
+                echo "<div class='failure'> Food Not Available!</div>";
+            }
             
-            <div class="foodMenuBox">
-                <div class="foodMenuBoxImg">
-                    <img src="./Images/Food Menu/Greek Pizza.jfif" alt="foodMenuPizza" class="ImgResponsive imgCurve">
-                </div>
-                <div class="foodMenuBoxDescription">
-                    <h4>
-                        Greek Pizza
-                    </h4>
-                    <p class="foodPrice">
-                        Rs.450
-                    </p>
-                    <p class="foodDescription">
-                        This is a kind of Pizza. Its originated from US. Its main ingredients are Pizza dough, cheese, tomato sauce. 
-                    </p>
-                    <br>
-                    <a href="OrderNow.php" class="orderButton orderButtonColor">
-                        Order Now
-                    </a>
-                </div>
-                <div class="clearfix">   
-                </div>
-            </div>
-
-            <div class="foodMenuBox">
-                <div class="foodMenuBoxImg">
-                    <img src="./Images/Food Menu/Chicago Pizza.webp" alt="foodMenuPizza" class="ImgResponsive imgCurve">
-                </div>
-                <div class="foodMenuBoxDescription">
-                    <h4>
-                        Chicago Pizza
-                    </h4>
-                    <p class="foodPrice">
-                        Rs.550
-                    </p>
-                    <p class="foodDescription">
-                        This is a kind of Pizza. Its originated from US. Its main ingredients are Pizza dough, cheese, tomato sauce.
-                    </p>
-                    <br>
-                    <a href="OrderNow.php" class="orderButton orderButtonColor">
-                        Order Now
-                    </a>
-                </div>
-                <div class="clearfix">   
-                </div>
-            </div>
             
-            <div class="foodMenuBox">
-                <div class="foodMenuBoxImg">
-                    <img src="./Images/Food Menu/Sicilian Pizza.jpg" alt="foodMenuPizza" class="ImgResponsive imgCurve">
-                </div>
-                <div class="foodMenuBoxDescription">
-                    <h4>
-                        Sicilian Pizza
-                    </h4>
-                    <p class="foodPrice">
-                        Rs.500
-                    </p>
-                    <p class="foodDescription">
-                        This is a kind of Pizza. Its originated from US. Its main ingredients are Pizza dough, cheese, tomato sauce. 
-                    </p>
-                    <br>
-                    <a href="OrderNow.php" class="orderButton orderButtonColor">
-                        Order Now
-                    </a>
-                </div>
-                <div class="clearfix">   
-                </div>
-            </div>
-
-            <div class="foodMenuBox">
-                <div class="foodMenuBoxImg">
-                    <img src="./Images/Food Menu/California Pizza.jpg" alt="foodMenuPizza" class="ImgResponsive imgCurve">
-                </div>
-                <div class="foodMenuBoxDescription">
-                    <h4>
-                        California Pizza
-                    </h4>
-                    <p class="foodPrice">
-                        Rs.400
-                    </p>
-                    <p class="foodDescription">
-                        This is a kind of Pizza. Its originated from US. Its main ingredients are Pizza dough, cheese, tomato sauce. 
-                    </p>
-                    <br>
-                    <a href="OrderNow.php" class="orderButton orderButtonColor">
-                        Order Now
-                    </a>
-                </div>
-                <div class="clearfix">   
-                </div>
-            </div>
-
-            <div class="foodMenuBox">
-                <div class="foodMenuBoxImg">
-                    <img src="./Images/Food Menu/Neapolitan Pizza.jpg" alt="foodMenuPizza" class="ImgResponsive imgCurve">
-                </div>
-                <div class="foodMenuBoxDescription">
-                    <h4>
-                        Neapolitan Pizza
-                    </h4>
-                    <p class="foodPrice">
-                        Rs.550
-                    </p>
-                    <p class="foodDescription">
-                        This is a kind of Pizza. Its originated from US. Its main ingredients are Pizza dough, cheese, tomato sauce. 
-                    </p>
-                    <br>
-                    <a href="OrderNow.php" class="orderButton orderButtonColor">
-                        Order Now
-                    </a>
-                </div>
-                <div class="clearfix">   
-                </div>
-            </div>
-
-            <div class="foodMenuBox">
-                <div class="foodMenuBoxImg">
-                    <img src="./Images/Food Menu/Detroit Pizza.jpg" alt="foodMenuPizza" class="ImgResponsive imgCurve">
-                </div>
-                <div class="foodMenuBoxDescription">
-                    <h4>
-                        Detroit Pizza
-                    </h4>
-                    <p class="foodPrice">
-                        Rs.600
-                    </p>
-                    <p class="foodDescription">
-                        This is a kind of Pizza. Its originated from US. Its main ingredients are Pizza dough, cheese, tomato sauce. 
-                    </p>
-                    <br>
-                    <a href="OrderNow.php" class="orderButton orderButtonColor">
-                        Order Now
-                    </a>
-                </div>
-                <div class="clearfix">   
-                </div>
-            </div>
-
+            ?>
             <div class="clearfix">
             </div>
             </div>

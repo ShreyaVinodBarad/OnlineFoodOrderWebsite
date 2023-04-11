@@ -233,9 +233,16 @@ if(isset($_GET['id']))
                     }   
                 }
             }
+            else
+            {
+                $ImageName=$CurrentImage;  
+                // Default Image when image is not selected
+            }
         }
-        else{
+        else
+        {
             $ImageName=$CurrentImage;
+            // Default Image when Button is not Clicked!
         }
         // Update the food in the database
         $sql3="UPDATE table_food SET

@@ -65,149 +65,86 @@
             <h2 class="alignCenter">
                 Explore Foods
             </h2>
-            
-            <div class="foodMenuBox">
-                <div class="foodMenuBoxImg">
-                    <img src="./Images/Food Menu/Tandoori Momos.png" alt="foodMenuMomos" class="ImgResponsive imgCurve">
-                </div>
-                <div class="foodMenuBoxDescription">
-                    <h4>
-                        Tandoori Momos
-                    </h4>
-                    <p class="foodPrice">
-                        Rs.100
-                    </p>
-                    <p class="foodDescription">
-                        Momo is a type of steamed filled dumpling, with origins from Tibet. 
-                    </p>
-                    <br>
-                    <a href="OrderNow.php" class="orderButton orderButtonColor">
-                        Order Now
-                    </a>
-                </div>
-                <div class="clearfix">   
-                </div>
-            </div>
+             
+            <?php
+            define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
+            // Display food that are Active
+            // SQL Query 
+            $sql="SELECT * FROM table_food WHERE Active='Yes'";
+            // Execute the Query
+            $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
+            $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
+            $Result=mysqli_query($conn,$sql);
+            // Count the Rows
+            $Count=mysqli_num_rows($Result);
+            // Check whether the food is available or not
+            if($Count>0)
+            {
+                // Food Available
+                while($row=mysqli_fetch_assoc($Result))
+                {
+                    // Get the values
+                    $Id=$row['Id'];
+                    $Title=$row['Title'];
+                    $Price=$row['Price'];
+                    $Description=$row['Description'];
+                    $ImageName=$row['ImageName'];
+                    ?>
+                    <div class="foodMenuBox">
+                    <div class="foodMenuBoxImg">
+                        <?php
+                        if($ImageName=="")
+                        {
+                            // Image Not Available
+                            echo "<div class='failure'> Image Not Available!</div>";
+                        }
+                        else
+                        {
+                            // Image Available
+                            ?>
+                            <img src="<?php echo SITEURL; ?>BackEnd/FoodPage/Images/.<?php echo $ImageName;?>" alt="foodMenuMomos" class="ImgResponsive imgCurve">
+                            <?php
+                        }
+                        ?>
+                    </div>
+                    <div class="foodMenuBoxDescription">
+                        <h4>
+                            <?php
+                                echo $Title
+                            ?>
+                        </h4>
+                        <p class="foodPrice">
+                            <?php
+                                echo $Price;
+                            ?>
+                        </p>
+                        <p class="foodDescription">
+                            <?php
+                            echo $Description;
+                            ?> 
+                        </p>
+                        <br>
+                        <a href="OrderNow.php" class="orderButton orderButtonColor">
+                            Order Now
+                        </a>
+                    </div>
+                    <div class="clearfix">   
+                    </div>
+                    </div>
 
-            <div class="foodMenuBox">
-                <div class="foodMenuBoxImg">
-                    <img src="./Images/Food Menu/Turkey Burger.jfif" alt="foodMenuPizza" class="ImgResponsive imgCurve">
-                </div>
-                <div class="foodMenuBoxDescription">
-                    <h4>
-                        Turkey Burger
-                    </h4>
-                    <p class="foodPrice">
-                        Rs.200
-                    </p>
-                    <p class="foodDescription">
-                        Burger, is a food consisting of fillings—usually a patty of ground meat, typically beef—placed inside a sliced bun or bread roll.
-                    </p>
-                    <br>
-                    <a href="OrderNow.php" class="orderButton orderButtonColor">
-                        Order Now
-                    </a>
-                </div>
-                <div class="clearfix">   
-                </div>
-            </div>
-            
-            <div class="foodMenuBox">
-                <div class="foodMenuBoxImg">
-                    <img src="./Images/Food Menu/Sicilian Pizza.jpg" alt="foodMenuPizza" class="ImgResponsive imgCurve">
-                </div>
-                <div class="foodMenuBoxDescription">
-                    <h4>
-                        Sicilian Pizza
-                    </h4>
-                    <p class="foodPrice">
-                        Rs.500
-                    </p>
-                    <p class="foodDescription">
-                        This is a kind of Pizza. Its originated from US. Its main ingredients are Pizza dough, cheese, tomato sauce. 
-                    </p>
-                    <br>
-                    <a href="OrderNow.php" class="orderButton orderButtonColor">
-                        Order Now
-                    </a>
-                </div>
-                <div class="clearfix">   
-                </div>
-            </div>
+                    
+                    <?php
 
-            <div class="foodMenuBox">
-                <div class="foodMenuBoxImg">
-                    <img src="./Images/Food Menu/Grilled Cheese Sandwich.jpg" alt="foodMenuPizza" class="ImgResponsive imgCurve">
-                </div>
-                <div class="foodMenuBoxDescription">
-                    <h4>
-                        Grilled Cheese Sandwich
-                    </h4>
-                    <p class="foodPrice">
-                        Rs.120
-                    </p>
-                    <p class="foodDescription">
-                        A sandwich is a food typically consisting of vegetables, sliced cheese or meat, placed on or between slices of bread, or more generally any dish wherein bread serves as a container or wrapper for another food type                    
-                    </p>
-                    <br>
-                    <a href="OrderNow.php" class="orderButton orderButtonColor">
-                        Order Now
-                    </a>
-                </div>
-                <div class="clearfix">   
-                </div>
-            </div>
+                }
 
-            <div class="foodMenuBox">
-                <div class="foodMenuBoxImg">
-                    <img src="./Images/Food Menu/Sorbet Ice Cream.jpg" alt="foodMenuPizza" class="ImgResponsive imgCurve">
-                </div>
-                <div class="foodMenuBoxDescription">
-                    <h4>
-                        Sorbet Ice Cream
-                    </h4>
-                    <p class="foodPrice">
-                        Rs.550
-                    </p>
-                    <p class="foodDescription">
-                        Sorbet is a frozen dessert made using ice combined with fruit juice, fruit purée, or other ingredients, such as wine, liqueur, or honey. Generally, sorbets do not contain dairy products, while sherbets do 
-                    </p>
-                    <br>
-                    <a href="OrderNow.php" class="orderButton orderButtonColor">
-                        Order Now
-                    </a>
-                </div>
-                <div class="clearfix">   
-                </div>
-            </div>
-
-            <div class="foodMenuBox">
-                <div class="foodMenuBoxImg">
-                    <img src="./Images/Food Menu/Genoise Cake.jpg" alt="foodMenuPizza" class="ImgResponsive imgCurve">
-                </div>
-                <div class="foodMenuBoxDescription">
-                    <h4>
-                        Genoise Cake
-                    </h4>
-                    <p class="foodPrice">
-                        Rs.450
-                    </p>
-                    <p class="foodDescription">
-                        Genoese cake or Genovese cake, is an Italian sponge cake named after the city of Genoa and associated with Italian and French cuisine 
-                    </p>
-                    <br>
-                    <a href="OrderNow.php" class="orderButton orderButtonColor">
-                        Order Now
-                    </a>
-                </div>
-                <div class="clearfix">   
-                </div>
-            </div>
-
+            }
+            else{
+                // Food Not Available
+                echo "<div class='failure'> Food Not Available!</div>";
+            }
+            ?>
             <div class="clearfix">
-            </div>
-            </div>
-            
+            </div> 
         </div>
     </section>
     <!-- The FoodMenu Section Ends Here! -->

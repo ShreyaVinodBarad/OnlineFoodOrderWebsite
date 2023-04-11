@@ -66,80 +66,65 @@
             <h2 class="alignCenter">
                 Inspiration for your First Order
             </h2>
-            <div class="box-3 floatContainer">
-                <a href="./Categories/Pizza/Pizza.html">
-                <img src="./Images/Food Categories/Pizza.avif" alt="Pizza" class="ImgResponsiveFoodCategories imgCurve">
-                <h3 class="floatText floatTextWhite">
-                    Pizza
-                </h3>
-                </a>
-            </div>
 
-            <div class="box-3 floatContainer">
-                <a href="./Categories/Momos/Momos.html">
-                <img src="./Images/Food Categories/Momos.jpg" alt="Pizza" class="ImgResponsiveFoodCategories imgCurve">
-                <h3 class="floatText floatTextWhite">
-                    Momos
-                </h3>
-                </a>
-            </div>
-            <div class="box-3 floatContainer">
-                <a href="./Categories/Burger/Burger.html">
-                <img src="./Images/Food Categories/Burger.jpg" alt="Pizza" class="ImgResponsiveFoodCategories imgCurve">
-                <h3 class="floatText floatTextWhite">
-                    Burger
-                </h3>
-                </a>
-            </div>
-            <div class="box-3 floatContainer">
-                <a href="./Categories/Sandwich/Sandwich.html">
-                <img src="./Images/Food Categories/Sandwich.jpg" alt="Pizza" class="ImgResponsiveFoodCategories imgCurve">
-                <h3 class="floatText floatTextWhite">
-                    Sandwich
-                </h3>
-                </a>
-            </div>
-            <div class="box-3 floatContainer">
-                <a href="./Categories/Pancake/Pancake.html">
-                <img src="./Images/Food Categories/Pancake.jpg" alt="Pizza" class="ImgResponsiveFoodCategories imgCurve">
-                <h3 class="floatText floatTextWhite">
-                    Pancake
-                </h3>
-                </a>
-            </div>
-            <div class="box-3 floatContainer">
-                <a href="./Categories/Soft Drink/SoftDrink.html">
-                <img src="./Images/Food Categories/Soft Drinks.jpg" alt="Pizza" class="ImgResponsiveFoodCategories imgCurve">
-                <h3 class="floatText floatTextWhite">
-                    Soft Drinks
-                </h3>
-                </a>
-            </div>
-            <div class="box-3 floatContainer">
-                <a href="./Categories/Donut/Donut.html">
-                <img src="./Images/Food Categories/Donuts.jpg" alt="Pizza" class="ImgResponsiveFoodCategories imgCurve">
-                <h3 class="floatText floatTextWhite">
-                    Donuts
-                </h3>
-                </a>
-            </div>
-            <div class="box-3 floatContainer">
-                <a href="./Categories/IceCream/IceCream.html">
-                <img src="./Images/Food Categories/Ice Cream.jpg" alt="Pizza" class="ImgResponsiveFoodCategories imgCurve">
-                <h3 class="floatText floatTextWhite">
-                    Ice Cream
-                </h3>
-                </a>
-            </div>
-            
-            <div class="box-3 floatContainer">
-                <a href="./Categories/Cake/Cake.html">
-                <img src="./Images/Food Categories/Cake.jpg" alt="Pizza" class="ImgResponsiveFoodCategories imgCurve">
-                <h3 class="floatText floatTextWhite">
-                    Cake
-                </h3>
-                </a>
-            </div>
+            <?php
+            // Display all the categories that are Active
+            // SQL Query
+            define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
+            // Create sql query to display category from database
+            $sql="SELECT * FROM table_category WHERE Active='Yes'";
+            // Execute the query
+            $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
+            $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
+            $Result=mysqli_query($conn,$sql);
+            // Count Rows to check whether the categoery is available or not
+            $Count=mysqli_num_rows($Result);
+            if($Count>0)
+            {
+                // Categories are available
+                while($row=mysqli_fetch_assoc($Result))
+                {
+                    // Get the Values
+                    $Id=$row['Id'];
+                    $Title=$row['Title'];
+                    $ImageName=$row['ImageName'];
+                    ?>
+                    <div class="box-3 floatContainer">
+                    <a href="./Categories/Pizza/Pizza.html">
+                    <?php
+                    if($ImageName=="")
+                    {
+                        // Image not Available
+                        // Display the Message
+                        echo "<div class='failure'> Image Not Available!</div>";
+                    }
+                    else
+                    {
+                        // Image is Available
+                        ?>
+                        <img src="<?php echo SITEURL;?>BackEnd/CategoryPage/Images/.<?php echo $ImageName;?>" alt="Pizza" class="ImgResponsiveFoodCategories imgCurve">
+                        <?php
+                    }
+                    ?>
+                    <h3 class="floatText floatTextWhite">
+                        <?php
+                        echo $Title;
+                        ?>
+                    </h3>
+                    </a>
+                    </div>  
+                    
+                    
+
+                    <?php
+                }
+            }
+            else
+            {
+                // Category not Available
+                echo "<div class='failure'> Category Not Available!</div>";
+            }
+            ?>
             <div class="clearfix">
             </div>
         </div>
