@@ -200,9 +200,9 @@ echo "This is Add Category Page!";
                 $sql2="INSERT INTO table_food SET 
                 Title='$Title',
                 Description='$Description',
-                Price='$Price',
+                Price=$Price,
                 ImageName='$ImageName',
-                CategoryId='$Category',
+                CategoryId=$Category,
                 Featured='$Featured',
                 Active='$Active'
                 ";

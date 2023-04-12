@@ -91,7 +91,7 @@
                     $ImageName=$row['ImageName'];
                     ?>
                     <div class="box-3 floatContainer">
-                    <a href="./Categories/Pizza/Pizza.html">
+                    <a href="<?php SITEURL; ?>Categorie_sFoods.php?CategoryId=<?php echo $Id; ?>">
                     <?php
                     if($ImageName=="")
                     {

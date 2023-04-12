@@ -170,7 +170,7 @@ if(isset($_GET['id']))
         $Title=$_POST['Title'];
         $Description=$_POST['Description'];
         $Price=$_POST['Price'];
-        $CurrentImage=$POST['CurrentImage'];
+        $CurrentImage=$_POST['CurrentImage'];
         $Category=$_POST['Category'];
         $Featured=$_POST['featured'];
         $Active=$_POST['active'];
@@ -270,6 +270,7 @@ if(isset($_GET['id']))
         else{
             // Failed to Update Category
             $_SESSION['UpdateFood']="<div class='failure'>Failed to Update Food!</div>";
+
             ?>
             <script>
                 window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/BackEnd/FoodPage/FoodPage.php'

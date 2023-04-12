@@ -8,9 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Food Delivery Website</title>
-
     <!-- Linking CSS File -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Foods.css">
 
     <!-- Bootstrap Icons Links -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
@@ -62,88 +61,55 @@
         </div>
     </section>
     <!-- The FoodSearch Section Ends Here! -->
-
-    
-    <!-- The FoodCategories Section Starts Here! -->
-    <section class="FoodCategories">
-        <div class="container ">
-            <h2 class="alignCenter">
-                Inspiration for your First Order
-            </h2>
-            <?php
-            // Create sql query to display category from database
-            $sql="SELECT * FROM table_category WHERE Active='Yes' LIMIT 3";
-            // Execute the query
-            $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
-            $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
-            $Result=mysqli_query($conn,$sql);
-            // Count Rows to check whether the categoery is available or not
-            $Count=mysqli_num_rows($Result);
-            if($Count>0)
+    <?php
+            // Check whether the ID is passed or not
+            if(isset($_GET['CategoryId']))
             {
-                // Categories is available
-                while($row=mysqli_fetch_assoc($Result))
-                {
-                    // Get the values like Id, Title, ImageName
-                    $Id=$row['Id'];
-                    $Title=$row['Title'];
-                    $ImageName=$row['ImageName'];
-                    ?>
-                    <div class="box-3 floatContainer">
-                    <a href="<?php SITEURL; ?>Categorie_sFoods.php?CategoryId=<?php echo $Id; ?>">
-                    <?php
-                    if($ImageName=="")
-                    {
-                        // Display the Message
-                        echo "<div class='failure'> Image Not Available!</div>";
-                    }
-                    else{
-                        // Image is Available
-                        ?>
-                        <img src="<?php echo SITEURL; ?>BackEnd/CategoryPage/Images/.<?php echo $ImageName;?>" alt="Pizza" class="ImgResponsiveFoodCategories imgCurve">
-                        <?php                        
-                    }
-                    ?>
-                    <h3 class="floatText floatTextWhite">
-                        <?php echo $Title; ?>
-                    </h3>
-                    </a>
-                    </div>
+                // Category Id is set and Get the Id
+                $CategoryId=$_GET['CategoryId'];
+                // Get the Category Title based on the Category Id
+                $sql="SELECT Title FROM table_category WHERE Id=$CategoryId ";
+                // Execute the Query
+                $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
+                $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
+                $Result = mysqli_query($conn,$sql);
+                // Get the Data from the database
+                $row=mysqli_fetch_assoc($Result);
+                // Get the Title
+                $CategoryTitle=$row['Title'];
 
-                    <?php
-                }
+                
             }
             else
             {
-                // Category not available
-                echo "<div class='failure'> Category Not Available!</div>";
+                // Category Id not Passed redirect to home page
+                ?>
+                <script>
+                    window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/';
+                </script>
+                <?php
             }
+            
             ?>
-            <div class="clearfix">
-            </div>
-        </div>
-    </section>
-    <!-- The FoodCategories Section Ends Here! -->
-
-    
-    <!-- The FoodMenu Section Starts Here! -->
+   <!-- The FoodMenu Section Starts Here! -->
     <section class="FoodMenu">
         <div class="container">
             <h2 class="alignCenter">
-                Explore Foods
+                The Results of Your Search <a href="#" class="Search"><?php echo $CategoryTitle?></a> are:
             </h2>
 
             <?php
-            // SQL Query
-            $sql2="SELECT * FROM table_food WHERE Active='Yes' AND Featured='Yes' LIMIT 6";
-            // Execute Query
-            $Result2=mysqli_query($conn,$sql2);
-            // Count Rows
+            // Create sql query to get food based on selected category
+            $sql2="SELECT * FROM table_food WHERE CategoryId=$CategoryId";
+            // Execute the Query
+            $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
+            $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
+            $Result2 = mysqli_query($conn,$sql2);
+            // Count the Rows
             $Count2=mysqli_num_rows($Result2);
-            // Check Whether the food available or not
+            // Check whether food is available or not
             if($Count2>0)
             {
-                // Food Available
                 while($row2=mysqli_fetch_assoc($Result2))
                 {
                     // Get all the Values
@@ -196,24 +162,18 @@
                     <div class="clearfix">   
                     </div>
                     </div>
-
-
-
                     <?php
                 }
             }
             else
             {
-                // Food Not Available
-                echo "<div class='failure'> Food Not Available!</div>";
+                // Food is not Available
+                echo "<div class='failure'>Food Not Available!</div>";
             }
-            
-            
             ?>
-            <div class="clearfix">
-            </div>
-            </div>
             
+            <div class="clearfix">
+            </div> 
         </div>
     </section>
     <!-- The FoodMenu Section Ends Here! -->
@@ -250,5 +210,6 @@
         </div>
     </section>
     <!-- The Footer Section Ends Here! -->  
+    
 </body>
 </html>
