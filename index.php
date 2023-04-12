@@ -1,3 +1,6 @@
+<?php
+ define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +55,7 @@
     <!-- The FoodSearch Section Starts Here! -->
     <section class="FoodSearch alignCenter">
         <div class="container">
-            <form action="">
+            <form action="<?php echo SITEURL;?>FoodSearch.php" method="POST">
                 <input type="search" name="search" placeholder="Search for the Food Here....">
                 <input type="submit" name="submit" value="Search" class="searchBtn searchBtnColor">
             </form>
@@ -68,7 +71,6 @@
                 Inspiration for your First Order
             </h2>
             <?php
-            define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
             // Create sql query to display category from database
             $sql="SELECT * FROM table_category WHERE Active='Yes' LIMIT 3";
             // Execute the query

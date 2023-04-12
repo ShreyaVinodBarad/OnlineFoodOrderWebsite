@@ -1,4 +1,6 @@
-
+<?php
+ define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
