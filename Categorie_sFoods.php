@@ -155,7 +155,7 @@
                             ?> 
                         </p>
                         <br>
-                        <a href="OrderNow.php" class="orderButton orderButtonColor">
+                        <a href="<?php echo SITEURL;?>OrderNow.php?FoodId=<?php echo $Id2; ?>" class="orderButton orderButtonColor">
                             Order Now
                         </a>
                     </div>

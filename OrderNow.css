@@ -77,17 +77,21 @@
     text-align: center;
 }
 .foodMenuBoxImg{
-    max-width: 100%;
-    float: left;
-    padding: 2% 3%;
-    height: auto;
+    max-width: 60%;
+    padding: 2% 20%;
+    height: 400px;
 }
 .ImgResponsive{
     width: 100%;
     height: 100px;
 }
+.FoodImgResponsive{
+    width: 100%;
+    height: 400px;
+}
+
 .imgCurve{
-    border-radius: 20px;
+     border-radius: 40px; 
 }
 .OrderNow{
     background-color: rgb(252, 238, 116);
@@ -99,10 +103,12 @@
     width: 70%;
     float: left;
     margin-left: 8%;
+    text-align: center;
 }
 .foodMenuBoxDescription h4{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    color: darkred;
 }
 .foodPrice{
     font-size: 1.5rem;
@@ -111,7 +117,7 @@
 }
 /* Quantity */
 .inputResponsive{
-    width: 90%;
+    width: 60%;
     padding: 1%;
     margin-bottom: 5%;
     border:none;
@@ -329,4 +335,18 @@
         font-weight: bold; 
         color:teal
     }
+}
+
+.failure
+{
+    color: red;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.success
+{
+    color: green;
+    font-size: 2rem;
+    font-weight: bolder;
 }

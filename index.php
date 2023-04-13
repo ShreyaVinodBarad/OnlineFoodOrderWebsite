@@ -62,6 +62,16 @@
         </div>
     </section>
     <!-- The FoodSearch Section Ends Here! -->
+    <!-- <?php
+        session_start();
+        if(isset($_SESSION['Order'])){
+            echo ($_SESSION['Order']);
+            // Displaying Session Message
+
+            unset($_SESSION['Order']);
+            // Removing Session Message
+        }
+    ?> -->
 
     
     <!-- The FoodCategories Section Starts Here! -->
@@ -189,7 +199,8 @@
                             ?> 
                         </p>
                         <br>
-                        <a href="OrderNow.php" class="orderButton orderButtonColor">
+                        <!-- Passing Id from Here -->
+                        <a href="<?php echo SITEURL;?>OrderNow.php?FoodId=<?php echo $Id2; ?>" class="orderButton orderButtonColor">
                             Order Now
                         </a>
                     </div>
