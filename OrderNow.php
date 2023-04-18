@@ -13,7 +13,6 @@
 
     <!-- Bootstrap Icons Links -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
     
 </head>
 <body>
@@ -214,6 +213,8 @@
                 {
                     
                     // Query Executed Successfully
+                    $_SESSION['Order']="<div class='failure'>Food Ordered Failed!</div>";
+                    
                     ?>
                     <script>
                         window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/';

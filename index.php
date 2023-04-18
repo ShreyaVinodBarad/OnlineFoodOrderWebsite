@@ -62,7 +62,7 @@
         </div>
     </section>
     <!-- The FoodSearch Section Ends Here! -->
-    <!-- <?php
+    <?php
         session_start();
         if(isset($_SESSION['Order'])){
             echo ($_SESSION['Order']);
@@ -71,7 +71,7 @@
             unset($_SESSION['Order']);
             // Removing Session Message
         }
-    ?> -->
+    ?>
 
     
     <!-- The FoodCategories Section Starts Here! -->
