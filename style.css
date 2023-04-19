@@ -156,6 +156,8 @@
 .FoodMenu{
     background-color: rgb(252, 238, 116);
     padding: 4% 0;
+    /* width: 100%; This is the trick: it makes the box fill the remaining space of the page. */
+
 }
     /* Food Menu Box */
 .orderButtonColor{

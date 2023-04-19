@@ -3,6 +3,7 @@
 
 .FullWidthTable{
     width: 100%;
+    font-size: 0.5rem;
 }
 table tr th{
     border-bottom: 1px solid black;

@@ -21,6 +21,16 @@ define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLV
             <h1>
                 <Strong>Order</Strong>
             </h1>
+
+            <?php
+            if(isset($_SESSION['OrderUpdate']))
+            {
+                echo ($_SESSION['OrderUpdate']);
+                // Displaying Session Message
+                unset($_SESSION['OrderUpdate']);
+                // Removing Session Message
+            }
+            ?>
             <table class="FullWidthTable">  
                 <tr>
                     <th>Sr.No.</th>
@@ -72,7 +82,29 @@ define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLV
                             <td><?php echo $Quantity; ?></td>
                             <td><?php echo $Total; ?></td>
                             <td><?php echo $OrderDate; ?></td>
-                            <td><?php echo $Status; ?></td>
+                            <td>
+                                <?php
+                                if($Status=="Ordered")
+                                {
+                                    echo "<label>$Status</label>";
+                                }
+                                elseif($Status=="On Delivery")
+                                {
+                                    echo "<label style='color:darkorange;'>$Status</label>";
+                                }
+                                
+                                elseif($Status=="Delivered")
+                                {
+                                    echo "<label style='color:green;'>$Status</label>";
+                                }
+                                
+                                elseif($Status=="Cancelled")
+                                {
+                                    echo "<label style='color:red;'>$Status</label>";
+                                }
+                                
+                                ?>
+                            </td>
                             <td><?php echo $CustomerName; ?></td>
                             <td><?php echo $CustomerContact; ?></td>
                             <td><?php echo $CustomerEmail; ?></td>

@@ -213,7 +213,7 @@
                 {
                     
                     // Query Executed Successfully
-                    $_SESSION['Order']="<div class='failure'>Food Ordered Failed!</div>";
+                    $_SESSION['Order']="<div class='success'>Food Ordered Successfully!</div>";
                     
                     ?>
                     <script>
