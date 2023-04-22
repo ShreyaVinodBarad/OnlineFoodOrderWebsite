@@ -65,10 +65,12 @@
     <section class="FoodMenu">
         <div class="container">
             <?php
+            $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
+            $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
             global $Search;
             if(isset($_POST['search']))
             {
-                $Search=$_POST['search'];
+                $Search=mysqli_real_escape_string($conn,$_POST['search']);
             }
             ?>
             <h2 class="alignCenter">

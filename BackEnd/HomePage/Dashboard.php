@@ -29,28 +29,70 @@
             }
             ?>
             <div class="Column4 AlignCenter">
+                <?php
+                // SQL Query 
+                $sql="SELECT * FROM table_category";
+                // Execute the query
+                $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
+                $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
+                $result=mysqli_query($conn, $sql);
+                // Count Rows
+                $count=mysqli_num_rows($result);
+                ?>
                 <h2>
-                    5
+                    <?php echo $count; ?>
                 </h2>
                 Categories
             </div>
             <div class="Column4 AlignCenter">
+            <?php
+                // SQL Query 
+                $sql2="SELECT * FROM table_food";
+                // Execute the query
+                $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
+                $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
+                $result2=mysqli_query($conn, $sql2);
+                // Count Rows
+                $count2=mysqli_num_rows($result2);
+                ?>
                 <h2>
-                    5
+                    <?php echo $count2; ?>
                 </h2>
-                Categories
+                Foods
+            </div>
+            <div class="Column4 AlignCenter"><?php
+                // SQL Query 
+                $sql3="SELECT * FROM table_order";
+                // Execute the query
+                $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
+                $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
+                $result3=mysqli_query($conn, $sql3);
+                // Count Rows
+                $count3=mysqli_num_rows($result3);
+                ?>
+                <h2>
+                    <?php echo $count3; ?>
+                </h2>
+                Total Orders
             </div>
             <div class="Column4 AlignCenter">
+                <?php
+                // Create SQL Query to get the total revenue genterated
+                // Aggreate Function in SQL 
+                $sql4="SELECT SUM(total) AS Total FROM table_order WHERE status='Delivered'";
+                // Execute the Query 
+                $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
+                $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
+                $result4=mysqli_query($conn, $sql4);
+                // Get the Value
+                $row4=mysqli_fetch_assoc($result4);
+                // Get the Total Revenue
+                $total_reveue=$row4['Total'];
+                ?>
                 <h2>
-                    5
+                    <?php echo $total_reveue; ?>
                 </h2>
-                Categories
-            </div>
-            <div class="Column4 AlignCenter">
-                <h2>
-                    5
-                </h2>
-                Categories
+                Revenue Generated
             </div>
             <div class="ClearFix">
             </div>

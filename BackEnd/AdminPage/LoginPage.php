@@ -48,12 +48,15 @@
 
 
 <?php
+$conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
+$Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
 // Check whether the submit button is clicked
 if(isset($_POST['Submit'])){
     // Process the Login
     // 1)Get the Data from the Login Form
-    $UserName=$_POST['UserName'];
-    $Password=md5($_POST['Password']);
+    $UserName=mysqli_real_escape_string($conn,$_POST['UserName']);
+    $rawPassword=md5($_POST['Password']);
+    $Password=mysqli_real_escape_string($conn,$rawPassword);
     // 2)Check whether the user with UserName and Password Exists!
     $sql="SELECT * FROM table_admin WHERE UserName='$UserName' AND Password='$Password'";
     // 3)Execute the query

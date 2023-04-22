@@ -54,6 +54,15 @@
     <!-- The FoodSearch Section Starts Here! -->
     <section class="FoodSearch alignCenter">
         <div class="container">
+            <?php
+            $conn=mysqli_connect("localhost:3307","root","") or die(mysqli_connect_error());
+            $Database=mysqli_select_db($conn,"assignment-03and04") or die(mysqli_error($conn));
+            global $Search;
+            if(isset($_POST['search']))
+            {
+                $Search=mysqli_real_escape_string($conn,$_POST['search']);
+            }
+            ?>
             <form action="<?php echo SITEURL;?>FoodSearch.php" method="POST">
                 <input type="search" name="search" placeholder="Search for the Food Here....">
                 <input type="submit" name="submit" value="Search" class="searchBtn searchBtnColor">

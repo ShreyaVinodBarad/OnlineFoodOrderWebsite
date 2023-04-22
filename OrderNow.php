@@ -217,7 +217,7 @@
                     
                     ?>
                     <script>
-                        window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/';
+                        window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/index.php';
                     </script>
                     <?php
                 }
@@ -227,7 +227,7 @@
                     $_SESSION['Order']="<div class='failure'>Food Ordered Failed!</div>";
                     ?>
                     <script>
-                        window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/';
+                        window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/index.php';
                     </script>
                     <?php
                 }
