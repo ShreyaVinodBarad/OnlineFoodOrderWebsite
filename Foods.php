@@ -39,8 +39,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            Contact
+                        <a href="AboutUs.php">
+                            About Us
                         </a>
                     </li>
                 </ul>
