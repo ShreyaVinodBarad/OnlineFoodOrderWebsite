@@ -16,7 +16,7 @@ define('SITEURL','http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLV
     <!-- Menu Section Ends Here -->
 
     <!-- Main Content Section Starts Here -->
-    <div class="MainContentOrderPage">
+    <div class="MainContent">
         <div class="Wrapper">
             <h1>
                 <Strong>Order</Strong>
