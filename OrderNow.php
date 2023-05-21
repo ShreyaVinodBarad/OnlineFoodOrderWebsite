@@ -13,6 +13,11 @@
 
     <!-- Bootstrap Icons Links -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- Sweet Alert -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
+    </script>
+
     
 </head>
 <body>
@@ -211,11 +216,12 @@
                 // Check Whether the query is executed successfully or not
                 if($Result2==True)
                 {
-                    
-                    // Query Executed Successfully
-                    $_SESSION['Order']="<div class='success'>Food Ordered Successfully!</div>";
-                    
                     ?>
+
+                    <!-- Query Executed Successfully -->
+                    <script>
+                        window.alert("Your Order has been Placed Successfully!");
+                    </script>
                     <script>
                         window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/index.php';
                     </script>
@@ -224,8 +230,10 @@
                 else
                 {
                     // Query not executed successfully
-                    $_SESSION['Order']="<div class='failure'>Food Ordered Failed!</div>";
                     ?>
+                    <script>
+                        window.alert("Failed to Order Your Food!");
+                    </script>
                     <script>
                         window.location.href='http://localhost:8080/SkillVertexInternship/ASSIGNMENT03SKILLVERTEX/index.php';
                     </script>

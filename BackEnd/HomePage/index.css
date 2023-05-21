@@ -43,6 +43,13 @@
     width: 100%;
     
 }
+.MainContentOrderPage{
+    margin: 0 0;
+    background-color: rgb(252, 238, 116);
+    padding: 0 0;
+    width: 1500vw;
+    min-height: 100vh;
+}
 .MainContent h1{
     margin: 1%;
 }
